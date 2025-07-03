@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- head starts -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title here -->
+    <title>My Travel Blog</title>
+</head>
+
+    <!-- body starts here -->
+<body>
+
+    <header> </header>
+
+    <h1><em>My Travel Blog</em></h1>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eligendi hic saepe. Saepe ipsum, nulla debitis autem nam sit delectus voluptate? Temporibus illum, a distinctio ab earum dicta eum facere autem laborum hic consequatur error natus, libero facilis porro? Eius rem deleniti totam, ex cumque officia sapiente libero tempore recusandae.</p>
+        <button>Read More...</button>
+    </div>
+
+    <!-- footer section -->
+    <footer>  <p/footer>
+
+</body>
+
+</html>
