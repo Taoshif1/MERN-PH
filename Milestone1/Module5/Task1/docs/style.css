@@ -1,0 +1,109 @@
+/*Shared styles*/
+.text {
+    color: #181818;
+
+}
+
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.btn-primary {
+    background-color: #695feb;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Nav styles*/
+
+.title{
+    font-size: 35px;
+    margin-left: 80px;
+}
+
+.title-color {
+    color: #695feb;
+}
+
+.navbar_container{
+    /*background: #FFF8F3; */
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+
+nav ul li {
+    list-style: none;
+    padding: 5px;
+    display: inline-block;
+    font-size: 25px;
+}
+nav li a{
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+}
+nav button{
+    margin-left: 20px;
+}
+
+/* Header styles*/
+.header-bg {
+    background-color: #FFF8F3; /* Moved from the children */
+    background-image: url('./images/developer.png'), url('./images/header_bg.png'); /* Kept the correct image */
+    background-repeat: no-repeat; /* Added to prevent tiling */
+    background-position: top left, bottom right; /* Added to position the image nicely */
+    max-height: 900px;
+}
+
+/* Banner section styles*/
+.banner{
+    height: 570px;
+    width: 440px;
+    margin: 0;
+}
+.banner-container{
+    /* background: #FFF8F3; */  
+    display: flex;
+    justify-content: space-between;
+}
+
+.title1{
+    font-size: 40px;
+}
+.title2{
+    font-size: 50px;
+    color: #695feb;
+}
+.banner-text{
+    margin-left: 300px;
+    max-width: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
