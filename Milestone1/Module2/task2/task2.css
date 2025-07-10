@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif 'Courier New', Courier, monospace;
+    font-weight: 900;
+}
+.style {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.style1{
+    color: red;
+}
+.style2{
+    color: blue;
+}
+.style3{
+    color: green;
+}
+.style4{
+    color: tomato;
+}
+.style5{
+    color: purple;
+}
+.style6{
+    color: orange;
+}
+
+#html {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#css {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#js {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
