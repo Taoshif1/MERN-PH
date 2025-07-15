@@ -12,5 +12,10 @@ img{
     flex: 1;
 }
 .vertical-collage img{
-    height: 50%;
+    height: calc((100% - 5px) / 2);  /*it means each image takes half the height of the container minus the gap */
+}
+.square-collage{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
 }
