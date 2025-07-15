@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+        body{
+            border: 2px solid rgb(223, 70, 70);
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+        .img-container{
+            display: flex;
+        }
+        .img-container img{
+            width: 100%;
+        }
+
+        @media screen and (max-width: 576px){
+            .img-container{
+                flex-direction: column;
+            }
+            .img-container img{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Web Design</h1>
+        <ol>
+            <li>Viewport Meta Tag</li>
+            <li>CSS Relative Unit</li>
+            <li>Body Max Width & Horizontal center allign/Margin auto</li>
+            <li>Image Fluid</li>
+            <li>Two column flex and use media query with flex direction column</li>
+            <li>Multi column Grid Layout</li>
+            <li>Menu Responsive, JS needed <sub>(upcoming)</sub></li>
+        </ol>
+    </header>
+    <main>
+        <div class="img-container">
+            <div>
+                <img src="/images/taoshiflex.webp" alt="image">
+            </div>
+            <div>
+                <img src="/images/taoshiflex.webp" alt="image">
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
