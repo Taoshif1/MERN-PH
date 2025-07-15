@@ -3,9 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Media</title>
+
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .food{
+            border: 2px solid #ccc;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .food img{
+            width: 100%; /*Gives kind of a responsive vibe, also sizes the huge img*/
+            border-radius: 20px;
+        }
+        /* Simple media query*/
+        @media screen and (max-width: 576px) {
+            .container{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+
 </head>
 <body>
+    <!-- .container>.food*12>img[src="images/taoshiflex.webp"]+h3{Food Item - $}+p{Hourly Rate: \$$99}+p>lorem20 -->
+    <div class="container">
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Time - 1</h3>
+            <p>Hourly Rate: $199</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ad culpa amet! Nulla voluptates alias cumque quibusdam odit? Doloremque, commodi!</p>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Time - 2</h3>
+            <p>Hourly Rate: $299</p>
+            <p>Asperiores corrupti deserunt officia omnis reiciendis vitae qui at placeat? Itaque cumque provident obcaecati repellat tenetur unde, officia iusto dolores.</p>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Time - 3</h3>
+            <p>Hourly Rate: $399</p>
+            <p>Culpa excepturi, molestiae consequatur labore tenetur, rem sit ullam harum, aliquam eum quaerat qui. Atque voluptatibus delectus veritatis nostrum? Libero?</p>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Time - 4</h3>
+            <p>Hourly Rate: $499</p>
+            <p>Debitis libero sapiente minima, doloribus dolor, assumenda modi mollitia illo exercitationem architecto saepe quidem. Totam eligendi unde et magnam eius?</p>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Time - 5</h3>
+            <p>Hourly Rate: $599</p>
+            <p>Cum sapiente nesciunt unde distinctio ut natus voluptatem explicabo similique corporis, repellat laborum, quos laudantium dolores consequuntur! Eaque, veniam similique.</p>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Time - 6</h3>
+            <p>Hourly Rate: $699</p>
+            <p>Incidunt doloremque sint ratione mollitia optio facilis odit? Eaque, tenetur! Quam consequuntur quas suscipit, animi cupiditate obcaecati non laboriosam itaque.</p>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Time - 7</h3>
+            <p>Hourly Rate: $799</p>
+            <p>Dolor exercitationem accusantium adipisci suscipit qui sit quas perferendis reprehenderit eius culpa voluptates veritatis ducimus, minima recusandae quisquam eos. Illum!</p>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Time - 8</h3>
+            <p>Hourly Rate: $899</p>
+            <p>Expedita iure, vel soluta consequuntur a perspiciatis accusantium non voluptas maxime repellendus at excepturi sunt qui quia architecto praesentium ducimus!</p>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Time - 9</h3>
+            <p>Hourly Rate: $999</p>
+            <p>Enim cum dolor doloribus similique amet ipsam veritatis, dolores excepturi! Ex, ullam. Harum, est architecto laborum a iusto optio temporibus?</p>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Time - 10</h3>
+            <p>Hourly Rate: $1099</p>
+            <p>Vitae sed sit consequatur, at similique magni, praesentium, qui aliquid temporibus quis voluptatibus aliquam provident placeat ipsum quisquam sapiente asperiores?</p>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Time - 11</h3>
+            <p>Hourly Rate: $1199</p>
+            <p>Consequatur, velit numquam nesciunt optio alias iste ex eos voluptatibus, commodi repellendus molestias minima praesentium assumenda quia? Quia, aliquam laudantium?</p>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Time - 12</h3>
+            <p>Hourly Rate: $1299</p>
+            <p>Reprehenderit velit molestiae iure voluptates quas incidunt omnis dolorem vitae tenetur. Soluta aliquam, fugit saepe minima voluptate cum quisquam vero.</p>
+        </div>
+    </div>
     
 </body>
 </html>
