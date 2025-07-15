@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .food{
+            border: 2px solid black;
+            padding: 10px;
+            border-radius: 12px;
+        }
+        .food img{
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        /* Smaller device*/
+        @media screen and (max-width: 576px){
+            .container{
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .food{
+                background-color: #fc52fc6c;
+            }
+        }
+        /*Medium Device*/
+        @media screen and (min-width:577px) and (max-width: 992px){
+            .container{
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .food{
+                background-color: #6d8de670;
+            }
+
+        }
+        /*Large Device*/
+        @media screen and (min-width:993px) {
+            .container{
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .food{
+                background-color: #7cc765dc;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- .container>.food*12>img[src="/images/taoshiflex.webp"]+h3{Hour - $}+p{Hire Cost: \&&00}+p>lorem20^btn{But Now} -->
+    <div class="container">
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Hour - 1</h3>
+            <p>Hire Cost: &&00</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus qui nemo, rem voluptate fugit nostrum nam recusandae autem quibusdam tempore?</p>
+            <button>But Now</button>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Hour - 2</h3>
+            <p>Hire Cost: &&00</p>
+            <p>Facere sapiente molestias sequi, aspernatur numquam blanditiis totam, fugiat esse, officia reprehenderit eum laboriosam necessitatibus dicta ipsum perferendis neque porro.</p>
+            <button>But Now</button>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Hour - 3</h3>
+            <p>Hire Cost: &&00</p>
+            <p>Et porro distinctio odio cum accusamus deleniti nemo veritatis beatae, nesciunt eius soluta laudantium totam quidem impedit aliquam ducimus accusantium.</p>
+            <button>But Now</button>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Hour - 4</h3>
+            <p>Hire Cost: &&00</p>
+            <p>Obcaecati cum error laborum iure, ducimus asperiores quasi sunt architecto quaerat sequi adipisci perspiciatis debitis saepe earum, harum blanditiis maiores?</p>
+            <button>But Now</button>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Hour - 5</h3>
+            <p>Hire Cost: &&00</p>
+            <p>Quaerat hic nulla in, veritatis doloremque maxime obcaecati. Nihil itaque odit laudantium recusandae eius exercitationem magni explicabo ipsum consequatur nobis!</p>
+            <button>But Now</button>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Hour - 6</h3>
+            <p>Hire Cost: &&00</p>
+            <p>Earum est voluptatibus consequuntur dolores doloremque recusandae? Enim, laudantium quae temporibus sunt aspernatur nobis fuga velit earum, dicta tempore dolore.</p>
+            <button>But Now</button>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Hour - 7</h3>
+            <p>Hire Cost: &&00</p>
+            <p>Animi iusto deleniti architecto debitis, nam eaque. Accusantium consectetur a earum sint, exercitationem modi aspernatur. Enim unde reiciendis similique quisquam!</p>
+            <button>But Now</button>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Hour - 8</h3>
+            <p>Hire Cost: &&00</p>
+            <p>Illo dignissimos sit repudiandae ex! Natus assumenda provident a! Sapiente officia perspiciatis temporibus beatae aspernatur excepturi omnis tenetur sed? Quos.</p>
+            <button>But Now</button>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Hour - 9</h3>
+            <p>Hire Cost: &&00</p>
+            <p>Reprehenderit recusandae cupiditate debitis obcaecati blanditiis laudantium ex vel ullam? Cumque eum quas odit expedita suscipit quos ab neque mollitia!</p>
+            <button>But Now</button>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Hour - 10</h3>
+            <p>Hire Cost: &&00</p>
+            <p>Fugiat expedita quod culpa animi et possimus, tempora esse nam corrupti facere, repudiandae porro inventore tempore maiores iure amet beatae.</p>
+            <button>But Now</button>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Hour - 11</h3>
+            <p>Hire Cost: &&00</p>
+            <p>Corrupti eligendi officiis accusantium doloribus perferendis facilis repellat facere consequatur fugit dolore aut, id nisi. Labore dolorem minus beatae quasi.</p>
+            <button>But Now</button>
+        </div>
+        <div class="food">
+            <img src="/images/taoshiflex.webp" alt="">
+            <h3>Hour - 12</h3>
+            <p>Hire Cost: &&00</p>
+            <p>Commodi nam minima tempore, adipisci, aut veritatis nulla excepturi facilis eaque explicabo tenetur! Sint molestias eos, modi autem asperiores cum.</p>
+            <button>But Now</button>
+        </div>
+    </div>
+    
+</body>
+</html>
