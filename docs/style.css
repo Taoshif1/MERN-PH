@@ -138,17 +138,79 @@ nav li a:hover {
     justify-content: center;
 }
 
+/*what-i-do-container section*/
+.what-i-do{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin: 20px auto;
+    width: 60%;
+}
+.what-i-do-container {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+    width: 80%;   
+    max-width: 1200px;
+    gap: 100px;
+}
 
+/*Resume summary section*/
+.resume-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin: 60px auto;
+    width: 80%;
+}
 
+.education-container {
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
 
-
-
-
-
-
-
-
-
+/*Footer styles*/
+.footer-container {
+    display: flex;
+    background-color: #FFF8F3;
+    color: #695feb;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-left > ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+.footer-right > form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 
 
