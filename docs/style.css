@@ -16,9 +16,15 @@
     padding: 10px 20px;
     margin: 5px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #ff4e25;
 }
 
 /* Nav styles*/
@@ -26,6 +32,7 @@
 .title{
     font-size: 35px;
     margin-left: 80px;
+    padding-left: 80px;
 }
 
 .title-color {
@@ -35,15 +42,21 @@
 .navbar_container{
     /*background: #FFF8F3; */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 15px;
     
+    
+}
 
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 nav ul li {
     list-style: none;
     padding: 5px;
-    display: inline-block;
     font-size: 25px;
 }
 nav li a{
@@ -51,8 +64,8 @@ nav li a{
     color: black;
     margin-right: 20px;
 }
-nav button{
-    margin-left: 20px;
+nav li a:hover {
+    color: #695feb;
 }
 
 /* Header styles*/
@@ -66,14 +79,16 @@ nav button{
 
 /* Banner section styles*/
 .banner{
-    height: 570px;
-    width: 440px;
-    margin: 0;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
 }
 .banner-container{
     /* background: #FFF8F3; */  
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
 }
 
 .title1{
@@ -88,8 +103,40 @@ nav button{
     max-width: 600px;
 }
 
+/*About me Section*/
+.aboutme-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin: 60px auto;
+    width: 80%;
+}
+.about-me {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.about-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 
-
+}
+.abouts{
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
