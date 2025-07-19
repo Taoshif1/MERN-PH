@@ -79,9 +79,10 @@ nav li a:hover {
 
 /* Banner section styles*/
 .banner{
-    width: 400px;
-    height: auto;
-    border-radius: 10px;
+    width: 0 auto;
+    height: 0 auto;
+    margin-top: -200px;
+
 }
 .banner-container{
     /* background: #FFF8F3; */  
