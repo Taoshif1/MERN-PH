@@ -138,6 +138,45 @@ btn-primary{
 }
 
 /** Welcome Section Styles */
+.welcome-section {
+    width: 100%;
+    max-width: 1440px; /* To match your other sections */
+    margin: 120px auto;
+    border-radius: 16px;
+    padding: 100px 120px;
+
+    /* The KEY FIX: Background image with a dark gradient on the left */
+    /* Replace 'URL_TO_YOUR_BANNER_IMAGE.png' with the correct path */
+    background-image: linear-gradient(to right, #070211 10%, rgba(7, 2, 17, 0) 100%), url('/Milestone1/Module5/Task2/MyWeb2/images/Vectorrr.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.welcome-content {
+    max-width: 1440px; /* Controls the width of the text area */
+    color: white; /* Makes text white and readable */
+}
+
+.welcome-content h2 { /* Was .welcome-title */
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.welcome-content p { /* Was .welcome-text */
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    line-height: 1.7;
+    margin: 24px 0 32px 0;
+}
+
+.welcome-content .join-now {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+
 
 /*Responsiveness*/
 @media (max-width: 768px) {
@@ -161,12 +200,13 @@ btn-primary{
         width: 100%;
         height: auto; /* Maintains the aspect ratio */
     }
-    .welcome-section {
-        flex-direction: column; /* Stacks items vertically */
-        padding: 60px 20px;
-        margin: 60px auto;
-        text-align: center;
+    .welcome-title {
+        font-size: 36px; /* Was 64px */
+        padding-left: 10px; /* Adjusted for smaller screens */
+        width: 100%; /* Ensures it fits within the screen */
+        height: auto;
     }
+
     
 }
 
