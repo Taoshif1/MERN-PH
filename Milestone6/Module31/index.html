@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="styles/style.css">
 
 </head>
+
 <body>
 
 <header>
@@ -62,6 +63,35 @@
 
     </div>
 </header>
+
+<!-- banner section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 lg:px-10 py-10 w-11/12 mx-auto">
+    
+    <!-- Left column: text + image for small screens -->
+    <div class="flex flex-col">
+        <!-- Image appears first on mobile, hidden on lg -->
+        <img src="./assets/hero-student.png" alt="student" class="mb-6 block lg:hidden">
+
+        <h2 class="text-5xl font-bold py-8">
+            <span class="text-[#00BCFF]">English </span> is Easy
+        </h2>
+        <p class="text-xl font-bangla">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, 
+            আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+        </p>
+
+        <form action="" class="flex flex-col mt-6 space-y-4">
+            <input type="text" placeholder="Enter Your Name" class="input input-bordered w-2/3"/>
+            <input type="text" placeholder="Enter Your Email" class="input input-bordered w-2/3"/>
+            <button type="submit" class="btn btn-primary w-1/3">Get Started</button>
+        </form>
+    </div>
+
+    <!-- Right column: image only for large screens -->
+    <div class="hidden lg:block">
+        <img src="./assets/hero-student.png" alt="student learning English">
+    </div>
+</section>
 
 
 
