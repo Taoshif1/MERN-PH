@@ -28,41 +28,55 @@
     <div class="navbar bg-base-100 shadow-sm px-4 lg:px-10">
     
     <!-- Navbar Start: Logo + Mobile Dropdown -->
-    <div class="navbar-start">
-
+        <div class="navbar-start">
+    
     <!-- Mobile dropdown -->
-    <div class="dropdown">
-        <label tabindex="0" class="btn btn-ghost md:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-        </svg>
-        </label>
-        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow">
-            <li><a href="#"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
-            <li><a href="#"><i class="fa-solid fa-book-open"></i> Learn</a></li>
-            <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
-        </ul>
-    </div>
-
+        <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
+            </label>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow">
+                <li><a href="#"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
+                <li><a href="#"><i class="fa-solid fa-book-open"></i> Learn</a></li>
+                <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+            </ul>
+        </div>
+    
     <!-- Logo -->
-        <a href="#" class="flex items-center gap-2 ml-2 lg:ml-0">
-            <span class="text-2xl font-bold">English</span>
-            <img src="./assets/logo.png" alt="logo" class="w-10 h-10"/>
-            <span class="font-bangla text-xl font-semibold">জানালা</span>
-        </a>
-    </div>
+            <a href="#" class="flex items-center gap-2 ml-2 lg:ml-0">
+                <span class="text-2xl font-bold">English</span>
+                <img src="./assets/logo.png" alt="logo" class="w-8 h-8"/>
+                <span class="font-bangla text-xl font-semibold">জানালা</span>
+            </a>
+        </div>
     
     <!-- Navbar End: Menu Buttons -->
     <div class="navbar-end hidden md:flex">
         <ul class="menu menu-horizontal px-1 space-x-4">
-            <li><a href="#" class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i> FAQ</a></li>
-            <li><a href="#" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i> Learn</a></li>
-            <li><a href="#" class="btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+            <li>
+                <a href="#" class="btn btn-outline btn-primary">
+                    <i class="fa-solid fa-circle-question"></i> FAQ
+                </a>
+            </li>
+            <li>
+                <a href="#" class="btn btn-outline btn-primary">
+                    <i class="fa-solid fa-book-open"></i> Learn
+                </a>
+            </li>
+            <li>
+                <a href="#" class="btn btn-outline btn-primary">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                </a>
+            </li>
         </ul>
     </div>
 
     </div>
 </header>
+
+
 
 <!-- banner section -->
 <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 lg:px-10 py-10 w-11/12 mx-auto">
@@ -94,7 +108,84 @@
 </section>
 
 
+<!-- lets learn vocabulary section -->
+<section>
+    <h2 class="text-6xl font-bold py-8 text-center">
+            <span class="text-[#00BCFF]">Let's </span> Learn Vocabularies
+    </h2>
 
-    <script src="index.js"></script>
+    <div id="level-container" class="flex gap-4 justify-center mb-50 flex-wrap w-10/12 m-auto"></div>
+
+</section>
+
+
+    <script src="scripts/index.js"></script>
 </body>
 </html>
+
+
+
+<!-- 
+ENGLISH  JANALA
+
+Work To do
+1. Show Levels on The UI
+ Show a center-aligned heading as Figma
+ Create dynamically generated buttons from API-01 for each lesson
+ Lesson Buttons will be displayed on page load
+
+ 2. Show Word Cards Based on Level
+ Show a default text that will be displayed in the Vocabulary section initially
+
+ on Clicking a Specific Lesson Button Load All the words from API-02
+
+ Display all words for a selected lesson in a card format, showing:
+
+ Word
+ Word meaning & pronunciation
+ Two buttons with relevant icons as per Figma
+ Show *No Word Found message if no words exist for a lesson
+
+ Create functionality to highlight the active lesson button
+
+ 3. Use Different Color on The Active Level Button
+ After Successfully Loading words of a level , diffirentiate the button so user can understand which button is active
+
+ 4. Vocabulary Details
+ Create functionality to open a modal when clicking the details icon
+ Data will be load from API-03
+ modal will displays:
+ Word with pronunciation
+ Example sentence
+ Synonyms
+ A "Complete Learning" button to close the modal
+
+ 5. Handling Invalid Data
+ avoid displaying falsy values like undefined or null
+ display relevant words if no data is found
+
+ 6. Loading Spinner
+ Create a loading spinner that will be display when vocabulary is loading from API
+
+ 7. Implement Search Functionality
+ Take a input Box.
+ on Changing value It will Search word and show in the UI.
+ If anyone Do search reset active button
+
+ 8. Save Word Feature
+ in the UI of Card add a button Heart icon
+ on Clicking it. Store the Word in the Saved Box
+ Show Saved words in a Different Section.
+
+ 9. Speak your Vocabularies
+ Create functionality for voice pronunciation of vocabulary words
+
+ Use below function and implement on clicking sound icon
+
+ function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-EN"; // English
+  window.speechSynthesis.speak(utterance);
+}
+
+For More >> you can explore this implementation 👉 https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ -->

@@ -4,6 +4,8 @@
     box-sizing: border-box; 
     background-color: aqua;*/
     font-family: "Poppins", sans-serif;
+    /* overflow-x: hidden; */
+    
 }
 .font-bangla {
     font-family: "Hind Siliguri", sans-serif;
