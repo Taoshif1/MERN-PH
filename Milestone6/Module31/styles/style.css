@@ -3,9 +3,13 @@
     padding: 0;
     box-sizing: border-box; 
     background-color: aqua;*/
+    font-family: "Poppins", sans-serif;
+}
+.font-bangla {
+    font-family: "Hind Siliguri", sans-serif;
 }
 
-/* poppins font */
+/* poppins font
 .poppins-regular {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -30,7 +34,7 @@
     font-style: normal;
 }
 
-/* hind siliguri font */
+hind siliguri font
 .hind-siliguri-regular {
     font-family: "Hind Siliguri", sans-serif;
     font-weight: 400;
@@ -53,4 +57,4 @@
     font-family: "Hind Siliguri", sans-serif;
     font-weight: 700;
     font-style: normal;
-}
+} */    
