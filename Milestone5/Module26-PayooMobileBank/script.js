@@ -15,7 +15,7 @@ const loginBtn = document.getElementById("loginBtn").addEventListener("click", (
     if(convertedNum === mobileNum && convertedPin === pin){
         window.location.href="./home.html"
     }else{
-        console.log("Wrong Credentials")
+        alert("Wrong Credentials")
     }
 })
 
