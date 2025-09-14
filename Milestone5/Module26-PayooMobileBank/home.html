@@ -23,23 +23,205 @@
     <link rel="stylesheet" href="./styles/style.css">
 
 </head>
-<body>
 
-    <header class="flex space p-5  ">
+<body class="bg-[#f4f5f7] h-[100vh] ">
+
+    <!-- home page -->
+    <div class=" max-w-lg mx-auto bg-white rounded-b-2xl">
+        
+    <!-- header/navbar section -->
+    <header class="flex p-5 justify-between items-center bg-white min-h-[50px] shadow-sm border-b-2 border-gray-300 ">
         <div class="flex">
             <div>
-                <img src="./assets/Group.png" alt="">
+                <img class="h-[50px] " src="./assets/Group.png" alt="">
             </div>
-            <div>
-                <p>$<span>1000</span></p>
-                <p>Available Balance</p>
+            <div class="ml-3">
+                <h2 class="font-bold text-xl">$<span id="balance">4500</span></h2>
+                <p class="text-gray-500">Available Balance</p>
             </div>
         </div>
-        <div>
-            <button class="btn " type=""><i class="fa-solid fa-right-from-bracket"></i>Log Out</button>
+        <div class="">
+            <button class="btn text-gray-500 text-lg rounded-lg" type=""><i class="fa-solid fa-right-from-bracket rotate-180"></i>Log Out</button>
         </div>
     </header>
 
-    
+
+    <!-- main content section -->
+    <div class="mt-2 p-5">
+
+        <!-- title and description section -->
+        <div class="">
+            <h1 class="font-bold text-[30px]">🔥Welcome to Payoo Bank!</h1>
+            <p class="text-[18px] text-gray-500 my-3">Enjoy easy and convenient financial services with us. Cashout charge is low and transparent.</p>
+        </div>
+
+        <!-- button Card section -->
+        <div class="grid grid-cols-3 gap-4 ">
+            <!-- card buttons -->
+            <div id="addMoney" class="text-center p-5 border-2 border-gray-300 rounded-lg bg-white shadow-sm">
+                <img class="mx-auto" src="./assets/wallet1.png" alt="">
+                <h1 class="mt-2">Add Money</h1>
+            </div>
+            <div id="sendMoney" class="text-center p-5 border-2 border-gray-300 rounded-lg bg-white shadow-sm">
+                <img class="mx-auto" src="./assets/send1.png" alt="">
+                <h1 class="mt-2">Send Money</h1>
+            </div>
+            <div id="transferMoney" class="text-center p-5 border-2 border-gray-300 rounded-lg bg-white shadow-sm">
+                <img class="mx-auto" src="./assets/money1.png" alt="">
+                <h1 class="mt-2">Transfer Money</h1>
+            </div>
+            <div id="getBonus" class="text-center p-5 border-2 border-gray-300 rounded-lg bg-white shadow-sm">
+                <img class="mx-auto" src="./assets/bonus1.png" alt="">
+                <h1 class="mt-2">Gets Bonus</h1>
+            </div>
+            <div id="payBills" class="text-center p-5 border-2 border-gray-300 rounded-lg bg-white shadow-sm">
+                <img class="mx-auto" src="./assets/purse1.png" alt="">
+                <h1 class="mt-2">Pay Bills</h1>
+            </div>
+            <div id="transactionHistory" class="text-center p-5 border-2 border-gray-300 rounded-lg bg-white shadow-sm">
+                <img class="mx-auto" src="./assets/transaction1.png" alt="">
+                <h1 class="mt-2">Transaction History</h1>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!--Add money section -->
+    <div class="all-form-section max-w-lg mx-auto bg-white rounded-xl px-10 mt-5">
+
+        <!-- add money form -->
+        <div class="addMoneyParent payooShow">
+            <h1 class="font-bold text-2xl my-2">Add Money</h1>      
+            <form action="" class="flex flex-col gap-4 mb-5 ">
+            <div class="">
+                <label class="font-semibold text-[18px]" for="amount">Select A Bank</label> <br>
+                <select name="bank" id="bank" class=" bg-[#f4f5f7] p-2 mt-3 rounded-lg border-none w-full">
+                    <option disabled selected>Select Bank</option>
+                    <option value="city Bank">City Bank</option>
+                    <option value="standard Chartered">Standard Chartered</option>
+                    <option value="brac Bank">Brac Bank</option>
+                    <option value="prime Bank">Prime Bank</option>
+                </select>
+            </div>
+            <div>
+                <label class="font-semibold text-[18px]" for="accountNo">Bank Account Number</label> <br>
+                <input class="bg-[#f4f5f7] p-2 rounded-lg mt-3 font-gray-500 border-none w-full" type="text" id="accountNo" placeholder="Enter 11 Digit Account Number">
+            </div>
+            <div>
+                <label class="font-semibold text-[18px]" for="amount">Amount to Add</label> <br>
+                <input class="bg-[#f4f5f7] p-2 rounded-lg mt-3 font-gray-500 border-none w-full" type="text" id="amount" placeholder="Enter Amount">
+            </div>
+            <div>
+                <label class="font-semibold text-[18px] mb-5" for="pin">PIN Number</label> <br>
+                <input class="bg-[#f4f5f7] p-2 rounded-lg mt-3 font-gray-500 border-none w-full" type="password" id="pin" placeholder="Enter 4 Digit PIN">
+            </div>
+            <button id="addMoneyBtn" class="btn bg-[#0874F2] rounded-full mb-10 text-white text-[18px]">Add Money</button>
+            </form>
+        </div>
+
+        <!-- cashOut Div -->
+        <div class="cashOutParent payooShow" style="display: none;">
+            <h1 class="font-bold text-2xl my-2">Cash Out</h1>
+            <form action="" class="flex flex-col gap-4 mb-5 ">
+
+            <div>
+                <label class="font-semibold text-[18px]" for="agentNumber">Agent Number</label> <br>
+                <input class="bg-[#f4f5f7] p-2 rounded-lg mt-3 font-gray-500 border-none w-full" type="text" id="agent" placeholder="Enter 11 Digit Agent Number">
+            </div>
+            <div>
+                <label class="font-semibold text-[18px]" for="cashOutAmount">Amount</label> <br>
+                <input class="bg-[#f4f5f7] p-2 rounded-lg mt-3 font-gray-500 border-none w-full" type="text" id="cashOutAmount" placeholder="Enter Amount">
+            </div>
+            <div>
+                <label class="font-semibold text-[18px] mb-5" for="cashOutpin">PIN Number</label> <br>
+                <input class="bg-[#f4f5f7] p-2 rounded-lg mt-3 font-gray-500 border-none w-full" type="password" id="cashOutPin" placeholder="Enter 4 Digit PIN">
+            </div>
+
+            <button id="cashOutBtn" class="btn bg-[#0874F2] rounded-full mb-10 text-white text-[18px]">Withdraw Money</button>
+        </form>
+        </div>
+
+        <!-- transfer money div -->
+        <div class="transferMoneyParent payooShow" style="display: none;">
+            <h1 class="font-bold text-2xl my-2">Transfer Money</h1>
+            <form action="" class="flex flex-col gap-4 mb-5 ">
+
+            <div>
+                <label class="font-semibold text-[18px]" for="userAccount">User Account Number</label> <br>
+                <input class="bg-[#f4f5f7] p-2 rounded-lg mt-3 font-gray-500 border-none w-full" type="text" id="userAccount" placeholder="Enter 11 Digit User Account Number">
+            </div>
+            <div>
+                <label class="font-semibold text-[18px]" for="transferAmount">Amount</label> <br>
+                <input class="bg-[#f4f5f7] p-2 rounded-lg mt-3 font-gray-500 border-none w-full" type="text" id="transferAmount" placeholder="Enter Amount to transfer">
+            </div>
+            <div>
+                <label class="font-semibold text-[18px] mb-5" for="transferPin">PIN Number</label> <br>
+                <input class="bg-[#f4f5f7] p-2 rounded-lg mt-3 font-gray-500 border-none w-full" type="password" id="transferPin" placeholder="Enter 4 Digit PIN">
+            </div>
+
+            <button id="transferBtn" class="btn bg-[#0874F2] rounded-full mb-10 text-white text-[18px]">Send Now</button>
+        </form>
+        </div>
+
+        <!-- get bonus div -->
+        <div class="getBonusParent payooShow" style="display: none;">
+            <h1 class="font-bold text-2xl my-2">Get Bonus</h1>
+            <form action="" class="flex flex-col gap-4 mb-5 ">
+
+            <div>
+                <label class="font-semibold text-[18px]" for="bonusCoupon">Enter Bonus Coupon</label> <br>
+                <input class="bg-[#f4f5f7] p-2 rounded-lg mt-3 font-gray-500 border-none w-full" type="text" id="bonusCoupon" placeholder="Enter Your Coupon">
+            </div>
+
+            <button id="getBonusBtn" class="btn bg-[#0874F2] rounded-full mb-10 text-white text-[18px]">Get Bonus</button>
+        </form>
+        </div>
+
+        <!-- pay bill div -->
+        <div class="payBillParent payooShow" style="display: none;">
+            <h1 class="font-bold text-2xl my-2">Pay Bill</h1>
+            <form action="" class="flex flex-col gap-4 mb-5 ">
+
+            <div class="">
+            <label class="font-semibold text-[18px]" for="amount">Select To Pay</label> <br>
+                <select name="bank" id="bank" class=" bg-[#f4f5f7] p-2 mt-3 rounded-lg border-none w-full">
+                    <option disabled selected>Select bank</option>
+                    <option value="city Bank">City Bank</option>
+                    <option value="standard Chartered">Standard Chartered</option>
+                    <option value="brac Bank">Brac Bank</option>
+                    <option value="prime Bank">Prime Bank</option>
+                </select>
+            </div>           
+            <div>
+                <label class="font-semibold text-[18px]" for="billerAccount">Biller Account Number</label> <br>
+                <input class="bg-[#f4f5f7] p-2 rounded-lg mt-3 font-gray-500 border-none w-full" type="text" id="billerAccount" placeholder="Enter Account Number">
+            </div>
+            <div>
+                <label class="font-semibold text-[18px]" for="payAmount">Amount to Pay</label> <br>
+                <input class="bg-[#f4f5f7] p-2 rounded-lg mt-3 font-gray-500 border-none w-full" type="text" id="payAmount" placeholder="Enter Amount">
+            </div>
+            <div>
+                <label class="font-semibold text-[18px] mb-5" for="payPin">PIN Number</label> <br>
+                <input class="bg-[#f4f5f7] p-2 rounded-lg mt-3 font-gray-500 border-none w-full" type="password" id="payPin" placeholder="Enter 4 Digit PIN">
+            </div>
+
+            <button id="payBillBtn" class="btn bg-[#0874F2] rounded-full mb-10 text-white text-[18px]">Pay Now</button>
+        </form>
+        </div>
+
+        <!-- transaction div -->
+        <div class="transactionParent payooShow" style="display: none;">
+            <div class="flex justify-between items-center">
+                <h1 class="font-bold text-2xl my-2">Transaction History</h1>
+                <p class="text-gray-500">View All</p>
+            </div>
+            <div id="transactionHistoryBtn" class="mt-4"></div>
+        </div>
+
+    </div>
+
+    <script src="home.js"></script>
 </body>
 </html>
