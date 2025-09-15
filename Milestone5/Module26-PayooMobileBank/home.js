@@ -62,13 +62,13 @@ function renderTransactions() {
         const transactionElement = document.createElement("div");
         transactionElement.classList.add("border-b", "py-2", "flex", "justify-between", "items-center");
 
-        // Formats the transaction object into a readable string.
+        // Formats the transaction object into a readable string .
         transactionElement.innerHTML = `
             <div class="flex items-center gap-4">
             <div>
                 <img class="h-10 w-10" src="./assets/wallet1.png" alt="transaction icon">
             </div>
-            <div>
+            <div> 
                 <p class="font-semibold">${tx.type}</p>
                 <p class="text-sm text-gray-500">${tx.details}</p>
             </div>
