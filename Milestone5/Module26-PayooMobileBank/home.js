@@ -255,29 +255,48 @@ function showSection(sectionClass){
     document.querySelector(sectionClass).style.display = "block";
 }
 
+// universal function to toggle activate buttons
+function activateButton(btnId){
+    const activeBtn = document.getElementsByClassName("formActive-btn");
+    for (const btn of activeBtn) {
+        btn.classList.remove("border-[#0874F2]","bg-[#0874F20d]", "text-blue-500");
+        btn.classList.add("border-gray-300");
+    }
+    const btn = document.getElementById(btnId);
+    btn.classList.remove("border-gray-300");
+    btn.classList.add("border-[#0874F2]", "bg-[#0874F20d]", "text-blue-500");
+    
+}
+
 // Add Event Listeners for each button
 document.getElementById("addMoney").addEventListener("click", function(){
     showSection(".addMoneyParent");
+    activateButton("addMoney");
 });
 
 document.getElementById("sendMoney").addEventListener("click", function(){
     showSection(".cashOutParent");
+    activateButton("sendMoney");
 });
 
 document.getElementById("transferMoney").addEventListener("click", function(){
     showSection(".transferMoneyParent");
+    activateButton("transferMoney");
 });
 
 document.getElementById("getBonus").addEventListener("click", function(){
     showSection(".getBonusParent");
+    activateButton("getBonus");
 });
 
 document.getElementById("payBills").addEventListener("click", function(){
     showSection(".payBillParent");
+    activateButton("payBills");
 });
 
 document.getElementById("transactionHistory").addEventListener("click", function(){
     showSection(".transactionParent");
+    activateButton("transactionHistory");
     renderTransactions(); // always refresh when showing
 });
 
