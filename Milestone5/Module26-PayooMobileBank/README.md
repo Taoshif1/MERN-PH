@@ -78,7 +78,7 @@ payoo-mobile-bank/
 ### 👉Dashboard
 ![dashboard](image-1.png)
 
-### Active Button
+### 👉Active Button
 ![alt text](image-2.png)
 
 ### 👉Transaction History
@@ -93,6 +93,20 @@ payoo-mobile-bank/
 ✅ Implement JWT authentication
 
 ✅ Add dynamic users & accounts
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repo 🍴
+
+2. Create your feature branch `(git checkout -b feature-name)`
+
+3. Commit changes `(git commit -m "Add feature")`
+
+4. Push to the branch `(git push origin feature-name)`
+
+5. Open a Pull Request 🎉
 
 ---
 
