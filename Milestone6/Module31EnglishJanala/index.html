@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Janala | Best Platform for learning English</title>
+
+    <!-- google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- daisy UI & TailWind CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- css stylesheet link -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar bg-base-100 shadow-sm px-4 lg:px-10">
+        <!-- Navbar Start: Logo + Mobile Dropdown -->
+        <div class="navbar-start">
+          <!-- Mobile dropdown -->
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost md:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a href="#"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-book-open"></i> Learn</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Logo -->
+          <a href="#" class="flex items-center gap-2 ml-2 lg:ml-0">
+            <span class="text-2xl font-bold">English</span>
+            <img src="./assets/logo.png" alt="logo" class="w-8 h-8" />
+            <span class="font-bangla text-xl font-semibold">জানালা</span>
+          </a>
+        </div>
+
+        <!-- Navbar End: Menu Buttons -->
+        <div class="navbar-end hidden md:flex">
+          <ul class="menu menu-horizontal px-1 space-x-4">
+            <li>
+              <a href="#" class="btn btn-outline btn-primary">
+                <i class="fa-solid fa-circle-question"></i> FAQ
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn btn-outline btn-primary">
+                <i class="fa-solid fa-book-open"></i> Learn
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn btn-outline btn-primary">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- banner section -->
+    <section
+      class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 lg:px-10 py-10 w-11/12 mx-auto"
+    >
+      <!-- Left column: text + image for small screens -->
+      <div class="flex flex-col">
+        <!-- Image appears first on mobile, hidden on lg -->
+        <img
+          src="./assets/hero-student.png"
+          alt="student"
+          class="mb-6 block lg:hidden"
+        />
+
+        <h2 class="text-5xl font-bold py-8">
+          <span class="text-[#00BCFF]">English </span> is Easy
+        </h2>
+        <p class="text-xl font-bangla">
+          আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+          আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+          অন্য একটি Level এ
+        </p>
+
+        <form action="" class="flex flex-col mt-6 space-y-4">
+          <input
+            type="text"
+            placeholder="Enter Your Name"
+            class="input input-bordered w-2/3"
+          />
+          <input
+            type="text"
+            placeholder="Enter Your Email"
+            class="input input-bordered w-2/3"
+          />
+          <button type="submit" class="btn btn-primary w-1/3">
+            Get Started
+          </button>
+        </form>
+      </div>
+
+      <!-- Right column: image only for large screens -->
+      <div class="hidden lg:block">
+        <img src="./assets/hero-student.png" alt="student learning English" />
+      </div>
+    </section>
+
+    <!-- lets learn vocabulary section -->
+    <section class="my-10">
+      <h2 class="text-6xl font-bold m-10 text-center">
+        <span class="text-[#00BCFF]">Let's </span> Learn Vocabularies
+      </h2>
+
+      <div
+        id="level-container"
+        class="flex gap-4 justify-center mb-10 flex-wrap w-10/12 m-auto"
+      ></div>
+    </section>
+
+    <!-- vocabulary cards section -->
+    <section
+      id="word-container"
+      class="bg-gray-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 lg:px-10 py-3 w-10/12 mx-auto"
+    ></section>
+
+    <section
+      class="text-center bg-gray-100 font-bangla my-3 w-10/12 mx-auto"
+      id="default-text"
+    >
+      <div class="p-10">
+        <p class="text-xl text-gray-600 p-5">
+          আপনি এখনো কোন Lesson Select করেন নি
+        </p>
+        <p class="text-3xl font-bold p-3">দয়া করে একটি Lesson Select করুন</p>
+      </div>
+    </section>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+
+    
+
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
+
+<!-- 
+ENGLISH  JANALA
+
+Work To do
+1. Show Levels on The UI
+ Show a center-aligned heading as Figma
+ Create dynamically generated buttons from API-01 for each lesson
+ Lesson Buttons will be displayed on page load
+
+ 2. Show Word Cards Based on Level
+ Show a default text that will be displayed in the Vocabulary section initially
+
+ on Clicking a Specific Lesson Button Load All the words from API-02
+
+ Display all words for a selected lesson in a card format, showing:
+
+ Word
+ Word meaning & pronunciation
+ Two buttons with relevant icons as per Figma
+ Show *No Word Found message if no words exist for a lesson
+
+ - Create functionality to highlight the active lesson button
+
+ 3. Use Different Color on The Active Level Button
+ After Successfully Loading words of a level , diffirentiate the button so user can understand which button is active
+
+ 4. Vocabulary Details
+ Create functionality to open a modal when clicking the details icon
+ Data will be load from API-03
+ modal will displays:
+ Word with pronunciation
+ Example sentence
+ Synonyms
+ A "Complete Learning" button to close the modal
+
+ 5. Handling Invalid Data
+ avoid displaying falsy values like undefined or null
+ display relevant words if no data is found
+
+ 6. Loading Spinner
+ Create a loading spinner that will be display when vocabulary is loading from API
+
+ 7. Implement Search Functionality
+ Take a input Box.
+ on Changing value It will Search word and show in the UI.
+ If anyone Do search reset active button
+
+ 8. Save Word Feature
+ in the UI of Card add a button Heart icon
+ on Clicking it. Store the Word in the Saved Box
+ Show Saved words in a Different Section.
+
+ 9. Speak your Vocabularies
+ Create functionality for voice pronunciation of vocabulary words
+
+ Use below function and implement on clicking sound icon
+
+ function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-EN"; // English
+  window.speechSynthesis.speak(utterance);
+}
+
+For More >> you can explore this implementation 👉 https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ -->

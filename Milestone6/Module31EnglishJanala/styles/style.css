@@ -4,14 +4,20 @@
     box-sizing: border-box; 
     background-color: aqua;*/
     font-family: "Poppins", sans-serif;
-    overflow-x: hidden;
-    
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
+
+.active {
+    background-color: #422AD5;
+    color: white !important;
+}
+
 .font-bangla {
     font-family: "Hind Siliguri", sans-serif;
 }
 
-/* poppins font
+
+/* poppins font 
 .poppins-regular {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -59,4 +65,4 @@ hind siliguri font
     font-family: "Hind Siliguri", sans-serif;
     font-weight: 700;
     font-style: normal;
-} */    
+} */
