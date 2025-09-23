@@ -68,7 +68,7 @@ const displayLevelWords = (words) => {
             <p class="font-bangla text-gray-800">"${word.meaning ? word.meaning : "অর্থ পাওয়া যায়নি"} / ${word.pronunciation ? word.pronunciation : "উচ্চারণ পাওয়া যায়নি"}"</p>
 
             <div class="flex justify-between mt-6">
-                <button class="btn btn-circle">
+                <button onClick="my_modal_5.showModal()" class="btn btn-circle">
                     <i class="fa-solid fa-circle-info"></i>
                 </button>
                 <button class="btn btn-circle">
