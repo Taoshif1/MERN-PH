@@ -1,10 +1,14 @@
 import './App.css'
-
+import ToDo from './components/ToDo';
 function App() {
   return (
     <>
 
       <h1>Learning REACT Core Components</h1>
+
+      <ToDo task="Learning REACT" isDone="Done"></ToDo>
+      <ToDo task="Learning MERN Stack" isDone="Not Done"></ToDo>
+
       <Person name="Taoshif Gazi" age={20}></Person>
 
       <Friend number={1} name="Moon"></Friend>
