@@ -11,7 +11,7 @@ const allLevels = () => {
 
 const removeActive = () => {
   const lessonBtns = document.getElementsByClassName("lesson-btn");
-  console.log(lessonBtns);
+  // console.log(lessonBtns);
   for (let btn of lessonBtns) {
     btn.classList.remove("active");
   }
@@ -32,7 +32,7 @@ const loadWords = (levelNo) => {
       // json.data.forEach(word => console.log(word));
       removeActive();
       const clickBtn = document.getElementById(`lesson-btn-${levelNo}`);
-      console.log(clickBtn);
+      // console.log(clickBtn);
       clickBtn.classList.add("active");
       displayLevelWords(json.data);
     })
@@ -68,7 +68,7 @@ const displayLevelWords = (words) => {
             <p class="font-bangla text-gray-800">"${word.meaning ? word.meaning : "অর্থ পাওয়া যায়নি"} / ${word.pronunciation ? word.pronunciation : "উচ্চারণ পাওয়া যায়নি"}"</p>
 
             <div class="flex justify-between mt-6">
-                <button onClick="my_modal_5.showModal()" class="btn btn-circle">
+                <button onClick="loadWordDetail(${word.id})" class="btn btn-circle">
                     <i class="fa-solid fa-circle-info"></i>
                 </button>
                 <button class="btn btn-circle">
@@ -80,6 +80,30 @@ const displayLevelWords = (words) => {
         `;
     wordContainer.appendChild(wordDiv);
   }
+};
+
+// load/fetch word details by id for modal
+const loadWordDetail = async (wordId) => {
+  const url = `https://openapi.programming-hero.com/api/word/${wordId}`;
+  console.log(url);
+  const res = await fetch(url);
+  const data = await res.json();
+  displayWordDetails(data.data);
+};
+// display word details in modal
+const displayWordDetails = (word) => {
+  console.log(word);
+  const detailsContainer = document.getElementById("details-container");
+  detailsContainer.innerHTML = `
+    <div class="text-center text-2xl">
+      <h3 class="text-3xl font-bold">${word.word ? word.word : "শব্দ পাওয়া যায়নি"}</h3>
+    <p class="py-4 italic mt-2 text-gray-600 font-bold">Meaning / Pronunciation</p>
+    <p class="font-bangla text-gray-800 p-3">"${word.meaning ? word.meaning : "অর্থ পাওয়া যায়নি"} / ${word.pronunciation ? word.pronunciation : "উচ্চারণ পাওয়া যায়নি"}"</p>
+    <p class="py-4 italic mt-2 text-gray-600 font-bold">Example</p>
+    <p class="font-bangla text-gray-800 p-2">"${word.example ? word.example : "উদাহরণ পাওয়া যায়নি"}"</p>
+    </div>
+  `;
+  document.getElementById("my_modal_5").showModal();
 };
 
 // print/display lessons
