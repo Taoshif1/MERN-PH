@@ -37,20 +37,7 @@ The app showcases five different methods for handling button clicks in React:
 
 The structure is clean and component-driven:
 
-src/
-├── assets/
-├── components/
-│   ├── Batsman.jsx       # Score counter with conditional congrats logic
-│   ├── Counter.jsx       # Simple state counter
-│   ├── Post.jsx          # For individual posts (if rendered)
-│   ├── Posts.jsx         # Fetches and displays posts (currently commented out)
-│   ├── Summary.jsx       # Placeholder/Future use
-│   ├── User.jsx          # For individual user cards
-│   └── Users.jsx         # Fetches data using 'use()' and renders User cards
-├── App.css
-├── App.jsx               # Main component: handles routing & feature integration
-├── index.css
-└── main.jsx     
+![image](image.png)
 
 ---
 
@@ -94,4 +81,8 @@ To run this project locally:
 
 The application will typically open at `http://localhost:5173`.
 
-Enjoy the app! 🎉         # App root and entry point
+Enjoy the app! 🎉    
+
+## SS
+![alt text](image-1.png)
+![alt text](image-2.png)
