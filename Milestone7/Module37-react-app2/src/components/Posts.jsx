@@ -1,4 +1,5 @@
 import { use } from "react"
+import Post from "./Post";
 
 export default function Posts({postsPromise}){
     
@@ -8,6 +9,9 @@ export default function Posts({postsPromise}){
     return(
         <div className="card">
             <h3>Posts: {posts.length}</h3>
+            {/* {
+                posts.map( post => <Post></Post> )
+            } */}
         </div>
     )
 }
