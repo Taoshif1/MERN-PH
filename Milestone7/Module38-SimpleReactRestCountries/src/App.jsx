@@ -11,7 +11,7 @@ function App() {
   return (
     <>
 
-      <h1>React Rest Countires</h1>
+      <h1>React Rest Countries</h1>
       
       {/* passing the promise in <Countries /> inside Suspense with a fallback */}
       <Suspense fallback={<h3>Countries are loading...</h3>}>

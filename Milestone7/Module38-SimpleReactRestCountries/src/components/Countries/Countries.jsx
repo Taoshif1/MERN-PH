@@ -1,5 +1,6 @@
 import { use } from "react";
 import Country from "../Country/Country";
+import './countries.css';
 
 // destructuring the prop recieved from App.jsx
 const Countries = ({countriesPromise}) => {
@@ -10,14 +11,15 @@ const Countries = ({countriesPromise}) => {
 
     return (
         <div>
-            <h4>There are {countries.length} countries</h4>
-            {
+            <div className="countries">
+                {
                 countries.map(country => 
                     <Country 
                         key={country.ccn3.ccn3} 
                         country = {country}>
                     </Country>)
             }
+            </div>
         </div>
     )
 }

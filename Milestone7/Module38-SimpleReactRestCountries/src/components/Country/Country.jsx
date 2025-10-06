@@ -1,7 +1,11 @@
+import './country.css' 
 
 const Country = ({country}) => {
-    // console.log(country.flags.flags.png)
-    // console.log(country.population.population)
+
+    const handleVisited = () => {
+        console.log("btn clicked")
+    }
+
 
     // 1. Destructure common deeply-nested data for clean access:
     const { flags, name, capital, area, population, continents, languages, currencies , cca3} = country;
@@ -20,7 +24,7 @@ const Country = ({country}) => {
         : 'N/A';
 
     return (
-        <div>
+        <div className='country'>
             <img src={flags?.flags?.png} alt={flags?.flags?.alt || 'Flag'} />  
             <h3>
                 <u>Name:</u> {name?.common} <small><sub>{capital?.capital?.[0]}</sub>
@@ -39,9 +43,19 @@ const Country = ({country}) => {
             <p>
                 <u>Currency:</u> <strong>{currencyDetails}</strong>
             </p>
+            <button onClick={handleVisited}>Not Visited</button>
             
         </div>
     );
 };
 
 export default Country;
+
+
+/**
+ * 1. inline CSS (style object) 
+ * 2. 
+ * 
+ * 
+ * 
+*/
