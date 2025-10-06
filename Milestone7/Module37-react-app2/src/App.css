@@ -1,0 +1,14 @@
+*{
+    margin: 5px;
+    padding: 2px;
+    background: #252525e1;
+    color: aliceblue;
+    /* border: 2px dotted blueviolet; */
+}
+
+.card{
+    border: 2px solid yellow;
+    margin: 8px;
+    padding: 10px;
+    border-radius: 20px;
+}
