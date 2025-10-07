@@ -5,14 +5,14 @@
 
 ---
 
-A **React-based project** built during **Module 38**, demonstrating data fetching, state management, and dynamic rendering using the **REST Countries API** from [Programming Hero OpenAPI](https://openapi.programming-hero.com/).
+A **React-based project** built during **Module 38**, demonstrating data fetching, state management, and dynamic rendering using the **REST Countries API** from `Programming Hero OpenAPI`.
 
 This project displays all countries, allows marking them as **visited**, and dynamically tracks **visited flags** and **visited country counts**.
 
 ---
 
 ### 🚀 Live Demo
-👉 **[https://simplereactrestcountries.netlify.app/](https://simplereactrestcountries.netlify.app/)**
+👉 **[simplereactrestcountries.netlify.app/](https://simplereactrestcountries.netlify.app/)**
 
 ---
 
@@ -118,6 +118,8 @@ fetch("https://openapi.programming-hero.com/api/alpha/116")
 
 - Scrollable flag container
 
+---
+
 ### country.css
 
 - Bordered, rounded country cards
@@ -159,7 +161,7 @@ npm run dev
 
 ## 🧾 Example API Response
 
-### '/api/all'
+### `/api/all`
 
 ```json
 [
@@ -182,7 +184,7 @@ npm run dev
 ]
 ```
 
-`/api/name/bangladesh`
+### `/api/name/bangladesh`
 
 ```json
 [
@@ -197,6 +199,8 @@ npm run dev
 ]
 
 ```
+
+---
 
 ## 🧑‍💻 Tech Stack
 
@@ -226,9 +230,9 @@ npm run dev
 
 ### 🌟 Credits
 
-### 👨‍💻 Developed by Taoshiflex
-### 🎓 CSE Student @ East West University, Dhaka
-### 💼 Exploring the intersection of Tech × Business × Creativity
+#### 👨‍💻 Developed by Taoshiflex
+#### 🎓 CSE Student @ East West University, Dhaka
+#### 💼 Exploring the intersection of Tech × Business × Creativity
 
 
 ---
