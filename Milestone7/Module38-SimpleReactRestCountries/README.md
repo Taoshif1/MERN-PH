@@ -76,9 +76,9 @@ fetch("https://openapi.programming-hero.com/api/alpha/116")
 
 ## 🧱 Components Breakdown
 
----
-
 ### 🧭 Countries.jsx
+
+---
 
 - Fetches data via use(countriesPromise)
 
