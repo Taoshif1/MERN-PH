@@ -4,6 +4,14 @@
     gap: 20px;
 }
 
+h2,h3{
+    text-align: center;
+}
+.visited-flags-container img{
+    width: 100px;
+    margin-right: 25px;
+}
+
 
 @media (max-width: 1200px) {
     .countries{

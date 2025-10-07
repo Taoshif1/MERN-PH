@@ -1,14 +1,29 @@
+import { useState } from 'react';
 import './country.css' 
 
-const Country = ({country}) => {
+const Country = ({country, handleVisitedCountries, handleVisitedFlags}) => {
+    const [visited, setVisited] = useState(false);   // visited country state
 
-    const handleVisited = () => {
-        console.log("btn clicked")
+    const handleVisited = () => {    // modifier of the state(setVisited)
+        // alert("btn clicked")
+        // if(visited){
+        //     setVisited(false)      // way 1 basic system
+        // }else{
+        //     setVisited(true)
+        // }
+
+        // setVisited(visited ? false : true);   // Way 2 using ternary operator
+
+        setVisited(!visited);     // Way 3 <---
+
+        handleVisitedCountries(country);
     }
 
 
     // 1. Destructure common deeply-nested data for clean access:
     const { flags, name, capital, area, population, continents, languages, currencies , cca3} = country;
+
+    // console.log(handleVisitedCountries)
 
     // 2. Safely access the array of language names and join them
     // Accesses: country.languages?.languages (the object of languages)
@@ -24,7 +39,7 @@ const Country = ({country}) => {
         : 'N/A';
 
     return (
-        <div className='country'>
+        <div className={`country  ${visited && 'country-visited'} ` }>
             <img src={flags?.flags?.png} alt={flags?.flags?.alt || 'Flag'} />  
             <h3>
                 <u>Name:</u> {name?.common} <small><sub>{capital?.capital?.[0]}</sub>
@@ -43,7 +58,12 @@ const Country = ({country}) => {
             <p>
                 <u>Currency:</u> <strong>{currencyDetails}</strong>
             </p>
-            <button onClick={handleVisited}>Not Visited</button>
+            <button className='button1' onClick={handleVisited}>
+                {visited ? 'Visited' : 'Not Visited'}
+            </button>
+            <button onClick={()=>{handleVisitedFlags(flags?.flags?.png)}}>
+                Add Visited Flag
+            </button>
             
         </div>
     );
@@ -55,7 +75,5 @@ export default Country;
 /**
  * 1. inline CSS (style object) 
  * 2. 
- * 
- * 
  * 
 */
