@@ -124,20 +124,7 @@ yarn dev
 The application will typically open at http://localhost:5173.
 
 📁 Project Structure
-.
-├── src/
-│   ├── assets/
-│   ├── components/
-│   │   ├── Header.jsx    # Navigation links
-│   │   ├── Home.jsx      # Simple landing page
-│   │   └── Login.jsx     # Main authentication logic (Google/GitHub/Sign Out)
-│   ├── firebase/
-│   │   └── firebase.init.js # Firebase app initialization and auth export
-│   └── layout/
-│       └── Root.jsx      # Main layout (Header + Outlet for page content)
-├── main.jsx              # Router setup and rendering
-├── package.json          # Dependency list (Firebase, react-router)
-└── README.md             # This file
+![alt text](image-3.png)
 
 ## 💡 Learning Takeaways
 
