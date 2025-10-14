@@ -39,24 +39,7 @@ This project demonstrates:
 
 # 🧩 Folder Structure
 
-📂 module48emailpassloginauth
-├── 📁 src
-│   ├── 📁 components
-│   │   ├── Home/Home.jsx
-│   │   ├── Login/Login.jsx
-│   │   ├── Register/Register.jsx
-│   │   └── Navbar/Navbar.jsx
-│   ├── 📁 firebase
-│   │   └── firebase.init.js
-│   ├── layout/Root.jsx
-│   ├── main.jsx
-│   ├── App.jsx
-│   ├── index.css
-│   └── __info__.js
-├── index.html
-├── package.json
-└── vite.config.js
-
+![alt text](image-2.png)
 ---
 
 # 🚀 Installation & Setup
