@@ -46,20 +46,20 @@ This project demonstrates:
 
 Follow these steps to run the project locally 👇
 
-1️⃣ Clone the repository
+## 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/module48emailpassloginauth.git
 cd module48emailpassloginauth
 ```
 
-2️⃣ Install dependencies
+## 2️⃣ Install dependencies
 
 ```bash
 npm install
 ```
 
-3️⃣ Setup Firebase
+## 3️⃣ Setup Firebase
 
 1. Go to Firebase Console
 
@@ -133,22 +133,23 @@ Implemented via React Router v7:
 
 --- 
 
-# 🧱 Components Breakdown
+## 🧩 Component Breakdown
 
-Component	Description
-Root.jsx	Parent layout containing Navbar and <Outlet /> for child routes
-Navbar.jsx	Responsive navigation with NavLink
-Register.jsx	Handles new user creation + validation + email verification
-Login.jsx	Handles login + error handling + password reset
-Home.jsx	Simple landing page
-firebase.init.js	Initializes Firebase + exports auth
-info.js	Documentation file for dev references
+| File | Description |
+| :--- | :--- |
+| **Root.jsx** | 🧱 Parent layout that contains the main `<Navbar />` and an `<Outlet />` for rendering child routes. |
+| **Navbar.jsx** | 🧭 Responsive navigation bar built with `NavLink` from React Router for smooth routing between pages. |
+| **Register.jsx** | 📝 Handles new user registration with form validation, Firebase `createUserWithEmailAndPassword`, and **email verification** logic. |
+| **Login.jsx** | 🔐 Manages user login, error handling, and password reset functionality using Firebase Auth methods. |
+| **Home.jsx** | 🏠 Simple landing page displayed at the root route (`/`). Serves as the entry point of the application. |
+| **firebase.init.js** | ⚙️ Initializes Firebase using project configuration and exports the `auth` instance for authentication features. |
+| **info.js** | 📘 Internal documentation file for developers — contains notes, code references, or environment setup details. |
 
 ---
 
 # ⚡ Scripts
 
-Command	Description
+Commands-
 
 ```bash
 npm run dev	        // Starts local dev server
