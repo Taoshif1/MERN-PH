@@ -28,7 +28,7 @@ This project demonstrates:
 # ⚡ Tech Stack
 
 * **Frontend:** React
-* **Styling:** Tailwind CSS, DaisyUI
+* **Styling:** Tailwind CSS
 * **Routing:** React Router DOM
 * **Authentication:** Google Firebase
 * **Build Tool:** Vite
