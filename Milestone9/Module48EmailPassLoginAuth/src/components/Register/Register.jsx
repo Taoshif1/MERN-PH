@@ -1,15 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase/firebase.init';
 
 const Register = () => {
 
+    const [user, setUser] = useState(false);
+    const [error, setError] = useState('');
+
     const handleRegister = (e) =>{
+
         e.preventDefault();  // Prevents default form submission/stops reloading
         // register logic here
         const email = e.target.email.value;    //get value by name from FORM
         const password = e.target.password.value;  //get value by name from FORM
         console.log("Register button clicked, ", email, password);
+        
+        // reset error message
+        setError('');  //by default empty
 
+        //setUser(false); //by default false
+        setUser(false);
+
+        // validation
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                console.log("after creation - ", result.user)
+                setUser(true);
+                e.target.reset(); // reset form after submission
+            })
+            .catch(error => {
+                console.log('Error during registration:', error);
+                setError(error.message);
+            })
     }
+
 
     return (
         <div class="hero bg-base-200 min-h-screen">
@@ -36,12 +60,20 @@ const Register = () => {
                                 </div>
                                 <button class="btn btn-neutral mt-4">Register</button>
                             </fieldset>
+                            {
+                                user && <p class="text-green-600 mt-4">User Created Successfully!</p>
+                            }
+                            {
+                                error && <p class="text-red-600 mt-4">{error}</p>
+                            }
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     );
-};
+
+}
+
 
 export default Register;
