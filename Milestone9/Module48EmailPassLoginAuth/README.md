@@ -168,10 +168,8 @@ info.js	Documentation file for dev references
 Command	Description
 
 ```bash
-npm run dev	Starts local dev server
-npm run build	Builds for production
-npm run preview	Serves production build
-npm run lint	Runs ESLint
+npm run dev	        // Starts local dev server
+npm run build	    // Builds for production
 ```
 
 ---
@@ -196,14 +194,14 @@ npm run lint	Runs ESLint
 
 ---
 
-# 📸 UI Preview (Optional)
+# 📸 UI Preview 
 
 ![alt text](image.png)
 ![alt text](image-1.png)
 
 ---
 
-#💡 Future Improvements
+# 💡 Future Improvements
 
 - Protect routes using PrivateRoute
 
@@ -222,7 +220,8 @@ npm run lint	Runs ESLint
 💼 Founder of Taoshiflex Venture & Solution
 📚 CSE Student | Entrepreneur | Lifelong Learner
 
+---
+
 # 📜 License
 
-This project is not open-source or MIT licensed.
-It’s built for personal learning and portfolio purposes only.
+## This project is not open-source or MIT licensed. It’s built for personal learning and portfolio purposes only.
