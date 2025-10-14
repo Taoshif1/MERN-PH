@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
 import { auth } from '../../firebase/firebase.init';
 import { Link } from 'react-router';
 
@@ -43,7 +43,7 @@ const Register = () => {
     }
 
     else if (!specialCharPattern.test(password)) {
-        setError("Error: Password must contain at least one special character (e.g. ! @ # $ % ^ & *)");
+            setError("Error: Password must contain at least one special character (e.g. ! @ # $ % ^ & *)");
         return;
     }
 
@@ -55,20 +55,26 @@ const Register = () => {
 
     // terms and conditions validation
     if(!terms){
-        setError("Please accept our terms and conditions");
+            setError("Please accept our terms and conditions");
         return;
     }
 
       // validation
     createUserWithEmailAndPassword(auth, email, password)
         .then((result) => {
-        console.log("after creation - ", result.user);
-        setUser(true);
-          e.target.reset(); // reset form after submission
+            console.log("after creation - ", result.user);
+            setUser(true);
+            e.target.reset(); // reset form after submission
+
+            // send verification email
+            sendEmailVerification(result.user)
+                .then(() => {
+                    alert("Verification email sent. Please check your inbox.");
+            });
         })
         .catch((error) => {
-        console.log("Error during registration:", error);
-        setError(error.message);
+            console.log("Error during registration:", error);
+            setError(error.message);
         });
     }
 
@@ -108,9 +114,6 @@ const Register = () => {
                                     Accept Our Terms & Conditions
                                     </label>
                                 </div>
-                                <p>Forgot Password?
-                                    <a href="/forgot-password" class="link link-hover text-blue-600 font-bold ml-1">Reset here</a>
-                                </p>
 
                                 <div>
                                     <p class="text-lg">
