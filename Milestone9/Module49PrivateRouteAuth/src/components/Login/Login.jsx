@@ -1,12 +1,32 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link } from "react-router-dom";
+import { AuthContext } from '../../AuthContext/AuthContext'
+
 
 const Login = () => {
+
+    const { signInUser } = use(AuthContext);
+
+    const handleLogin = (event) => {
+        event.preventDefault();
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        // console.log(" Email & Password -> ", email, password);
+        signInUser(email, password)
+        .then(result => {
+            console.log(" Inside login -> ", result.user)
+        })
+        .catch(error => {
+            console.error(" Failed to login in login -> ", error)
+        });
+
+    }
+
     return (
             <div class="card bg-base-100 mx-auto w-full max-w-sm shrink-0 shadow-2xl">
         <div class="card-body">
         <h1 class="text-4xl font-bold">Please Login!</h1>
-        <form>
+        <form onSubmit={handleLogin}>
         <fieldset class="fieldset">
 
             {/* Email Field */}
