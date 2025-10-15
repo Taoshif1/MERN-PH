@@ -1,10 +1,33 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const Login = () => {
     return (
-        <div>
-            <h1>Login</h1>
-        </div>
+            <div class="card bg-base-100 mx-auto w-full max-w-sm shrink-0 shadow-2xl">
+        <div class="card-body">
+        <h1 class="text-4xl font-bold">Please Login!</h1>
+        <form>
+        <fieldset class="fieldset">
+
+            {/* Email Field */}
+            <label class="label">Email</label>
+            <input name="email" type="email" class="input" placeholder="Email" />
+
+            {/* Password Field */}
+            <label class="label">Password</label>
+            <input name="password" type="password" class="input" placeholder="Password" />
+
+            <div>
+                <a class="link link-hover">Forgot password?</a>
+            </div>
+
+            <button class="btn btn-neutral mt-4">Login</button>
+
+        </fieldset>
+        </form>
+        <p>New to our website? Please <Link className=" text-blue-500 hover:text-blue-700" to="/register">Register</Link> </p>
+    </div>
+    </div>
     );
 };
 
