@@ -1,26 +1,50 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
+// import { createUserWithEmailAndPassword } from "firebase/auth";
 import React from "react";
 import { Link } from "react-router-dom";
-import { auth } from "../../Firebase/Firebase.init";
+import { AuthContext } from "../../AuthContext/AuthContext";
+// import { auth } from "../../Firebase/Firebase.init";
+import { use } from "react";
+
+
+
 
 const Register = () => {
 
+
+    // Form submit handler
+    // const handleRegister = (event) => {
+    //     event.preventDefault();
+    //     const email = event.target.email.value;
+    //     const password = event.target.password.value;
+
+    //     console.log(" email & pass -> ", email, password);
+
+    //     // Call the createUserWithEmailAndPassword function from Firebase Auth
+    //     createUserWithEmailAndPassword(auth, email, password)
+    //         .then(result => {
+    //             console.log(" user created successfully-> ", result.user);
+    //         }).catch(error => {
+    //             console.error("Failed!! error from create user -> ", error);
+    //         })
+
+    // };
+
+    const { createUser } = use(AuthContext);
+
     const handleRegister = (event) => {
         event.preventDefault();
+        const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        console.log(" email & pass -> ", email, password);
-
-        // Call the createUserWithEmailAndPassword function from Firebase Auth
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                console.log(" user created successfully-> ", result.user);
-            }).catch(error => {
-                console.error("Failed!! error from create user -> ", error);
-            })
-
-    };
+        createUser(email, password)
+        .then(result => {
+            console.log(" Inside register2 -> ", result.user)
+        })
+        .catch(error => {
+            console.error(" Failed to create user in register 2 -> ", error)
+        })
+    }
 
 return (
     <div class="card bg-base-100 mx-auto w-full max-w-sm shrink-0 shadow-2xl">
