@@ -14,10 +14,11 @@ const Login = () => {
         // console.log(" Email & Password -> ", email, password);
         signInUser(email, password)
         .then(result => {
-            console.log(" Inside login -> ", result.user)
+            console.log(" Inside login -> ", result.user);
+            event.target.reset();  // reset the form fields
         })
         .catch(error => {
-            console.error(" Failed to login in login -> ", error)
+            console.error(" Failed to login in login -> ", error);
         });
 
     }

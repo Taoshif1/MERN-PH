@@ -3,15 +3,34 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { AuthContext } from "../../AuthContext/AuthContext";
 import { use } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    const authInfo = use(AuthContext);
-    console.log("Inside Navbar -> ", authInfo);
+
+    const { user, signOutUser } = use(AuthContext);  
+    // console.log("Inside Navbar -> ", user);
+
+    const handleSignOut = () => {
+
+        signOutUser()
+        .then(() => {
+            console.log(" Signed out successfully ");
+        }).catch((error) => {
+            console.error(" Error signing out -> ", error);
+        });
+    }
+
     const links = (
     <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/login">Login</NavLink></li>
         <li><NavLink to="/register">Register</NavLink></li>
+        {
+            user && <>
+                <li><NavLink to="/orders">Orders</NavLink></li>
+                <li><NavLink to="/profile">Profile</NavLink></li>
+            </>
+        }
     </>
     );
 
@@ -45,7 +64,9 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1">{links}</ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                { user ? 
+                <a className="btn" onClick={handleSignOut}>Sign Out</a> : 
+                <Link to="/login"><a className="btn">Login</a></Link> }
             </div>
         </div>
     );
