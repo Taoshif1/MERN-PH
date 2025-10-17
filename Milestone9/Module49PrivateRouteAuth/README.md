@@ -20,34 +20,7 @@ This project helps users understand how **private routes** work and how to prote
 
 The project follows a standard modular structure, emphasizing separation of concerns for Authentication logic and UI components.
 
-Module49PrivateRouteAuth/
-├── public/
-├── src/
-│ ├── AuthContext/
-│ │ ├── AuthContext.jsx
-│ │ ├── AuthProvider.jsx
-│ ├── components/
-│ │ ├── Dashboard/Dashboard.jsx
-│ │ ├── Home/Home.jsx
-│ │ ├── Login/Login.jsx
-│ │ ├── Navbar/
-│ │ │ ├── Navbar.jsx
-│ │ │ └── Navbar.css
-│ │ ├── Orders/Orders.jsx
-│ │ ├── Profile/Profile.jsx
-│ │ ├── Register/Register.jsx
-│ │ ├── Routes/PrivateRoute.jsx
-│ ├── firebase/
-│ │ └── firebase.init.js
-│ ├── layout/
-│ │ └── Root.jsx
-│ ├── main.jsx
-│ ├── App.css
-│ ├── index.css
-│
-├── .gitignore
-├── package.json
-└── vite.config.js
+![alt text](image-3.png)
 
 ---
 
@@ -143,10 +116,6 @@ const firebaseConfig = {
 };
 ```
 
-## ⚠️ Important:
-
-Never expose your actual credentials publicly on GitHub. Use .env file for production builds.
-
 ### 4️⃣ Run the App
 
 ```bash
@@ -171,6 +140,22 @@ Now open http://localhost:5173 to view it in your browser 🎯
 ---
 
 ## 🧩 Core Logic Overview
+
+### 🧱 Component Breakdown
+
+| File                 | Type      | Description                                                                     |
+| :------------------- | :-------- | :------------------------------------------------------------------------------ |
+| **Root.jsx**         | Layout    | Parent layout containing `<Navbar />` and `<Outlet />` for child routes.        |
+| **Navbar.jsx**       | UI        | Responsive navigation bar built with **NavLink**, updates based on login state. |
+| **Register.jsx**     | Component | Handles new user registration, validation, and Firebase email verification.     |
+| **Login.jsx**        | Component | Manages login logic, error handling, and password reset flow.                   |
+| **Home.jsx**         | Page      | Simple public landing page for all users.                                       |
+| **PrivateRoute.jsx** | Logic     | Protects routes, ensuring only authenticated users can access certain pages.    |
+| **AuthProvider.jsx** | Context   | Wraps the app with global authentication context using React’s Context API.     |
+| **firebase.init.js** | Config    | Initializes Firebase and exports `auth` instance for use in the app.            |
+| **info.js**          | Docs      | Developer reference file containing setup and configuration notes.              |
+
+---
 
 ### 🔸 AuthProvider.jsx
 
