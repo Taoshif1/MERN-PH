@@ -1,18 +1,14 @@
-import React, { use } from 'react';
-
-
-
-const categoryPromise = fetch("/categories.json").then(res=>res.json());
-// console.log(categoryPromise);
+import { useParams } from 'react-router';
 
 
 const CategoryNews = () => {
 
-    const categories = use(categoryPromise);
+    const { id }  = useParams();
+    // console.log(id)
 
     return (
         <div>
-            <h4>Category News!!</h4>
+            <h4>Category News! - {id}</h4>
         </div>
     );
 };
