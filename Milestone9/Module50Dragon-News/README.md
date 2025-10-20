@@ -7,7 +7,7 @@ This project demonstrates React Router, dynamic routes, JSON data rendering & a 
 
 ## 🚀 Project Overview
 
-Dragon News is a news platform interface inspired by real-world news portals. It features category-based filtering, modular layouts, reusable components and data-driven rendering using static JSON files (`news.json`, `categories.json`).
+Dragon News is a news platform interface inspired by real-world news portals. It features category-based filtering, modular layouts, reusable components & data-driven rendering using static JSON files (`news.json`, `categories.json`).
 
 ---
 
@@ -15,12 +15,12 @@ Dragon News is a news platform interface inspired by real-world news portals. It
 
 - **React Router v7.9** → Dynamic routes & loaders  
 - **Vite** → Super fast development server  
-- **TailwindCSS + DaisyUI** → Clean and modern UI design  
+- **TailwindCSS + DaisyUI** → Clean & modern UI design  
 - **React Fast Marquee** → Smooth scrolling headlines  
 - **React Icons** → Beautiful icons integration  
 - **Date-fns** → Modern date formatting  
 - **Suspense & use() hook** → Lazy loading categories  
-- **Conditional rendering & filtering** → Custom logic for categories, today’s picks, and all news
+- **Conditional rendering & filtering** → Custom logic for categories, today’s picks & all news
 
 ---
 
@@ -32,19 +32,19 @@ Dragon News is a news platform interface inspired by real-world news portals. It
 
 ## 🚀 Key Features
 
-* **Responsive Multi-Column Layout:** Implemented a standard newspaper layout with dedicated Left and Right sidebars alongside the main content area using **Tailwind CSS Grid**.
+* **Responsive Multi-Column Layout:** Implemented a standard newspaper layout with dedicated Left & Right sidebars alongside the main content area using **Tailwind CSS Grid**.
 
 * **Dynamic Data Loading:** News data is loaded using **React Router's Loader** function for efficient pre-rendering.
 
 * **Category-Based Routing:** Utilizes dynamic routing (`/category/:id`) to display news filtered by category ID.
 
-* **Custom Filtering Logic:** Implements logic in `CategoryNews.jsx` to filter news based on the category ID, including special IDs for "All News" (ID 0) and "Today's Pick" (ID 1).
+* **Custom Filtering Logic:** Implements logic in `CategoryNews.jsx` to filter news based on the category ID, including special IDs for "All News" (ID 0) & "Today's Pick" (ID 1).
 
-* **UI Frameworks:** Styled entirely with **Tailwind CSS** and **DaisyUI** components for rapid development.
+* **UI Frameworks:** Styled entirely with **Tailwind CSS** & **DaisyUI** components for rapid development.
 
-* **Data Presentation:** Used **`react-fast-marquee`** for the "Latest News" ticker and **`date-fns`** for precise date formatting in the header.
+* **Data Presentation:** Used **`react-fast-marquee`** for the "Latest News" ticker & **`date-fns`** for precise date formatting in the header.
 
-* **Code Structure:** Follows a clean pattern with separate folders for **`Layouts`**, **`pages`**, **`Routes`**, and **`components`**.
+* **Code Structure:** Follows a clean pattern with separate folders for **`Layouts`**, **`pages`**, **`Routes`** & **`components`**.
 
 ---
 
@@ -69,12 +69,12 @@ Dragon News is a news platform interface inspired by real-world news portals. It
 
 | File/Component | Purpose | Key Concept Demonstrated |
 | :--- | :--- | :--- |
-| **`Router.jsx`** | Defines all main routes, including nested routes for the Home Layout and placeholders for Auth/News. | Dynamic Route (`/category/:id`), **Loader Function**. |
-| **`HomeLayout.jsx`** | Main structural component; defines the Header, Navbar, Main Content (`<Outlet />`), and Left/Right Sidebars. | Nested Routing Layout, **`grid-cols-12`** structure. |
-| **`CategoryNews.jsx`** | The main news display component. It uses **`useLoaderData`** and **`useParams`** to filter the loaded data based on the URL ID. | Data filtering logic, **`useEffect`** dependency management. |
-| **`LeftAside.jsx`** | Displays news categories using the React **`use()`** hook and **`Suspense`** for asynchronous data fetching. | Asynchronous UI (Categories), Category Navigation. |
-| **`NewsCard.jsx`** | Renders individual news items, including image, author info, and dynamic rating/view counts. | Complex Component Structure, Date Formatting (`date-fns`). |
-| **`SocialLogin.jsx`** (Right Aside) | Component with placeholder buttons for Google and GitHub—**ready for Firebase Auth integration in the next module.** | UI readiness for next Auth phase. |
+| **`Router.jsx`** | Defines all main routes, including nested routes for the Home Layout & placeholders for Auth/News. | Dynamic Route (`/category/:id`), **Loader Function**. |
+| **`HomeLayout.jsx`** | Main structural component. Defines the Header, Navbar, Main Content (`<Outlet />`) & Left/Right Sidebars. | Nested Routing Layout, **`grid-cols-12`** structure. |
+| **`CategoryNews.jsx`** | The main news display component. It uses **`useLoaderData`** & **`useParams`** to filter the loaded data based on the URL ID. | Data filtering logic, **`useEffect`** dependency management. |
+| **`LeftAside.jsx`** | Displays news categories using the React **`use()`** hook & **`Suspense`** for asynchronous data fetching. | Asynchronous UI (Categories), Category Navigation. |
+| **`NewsCard.jsx`** | Renders individual news items, including image, author info & dynamic rating/view counts. | Complex Component Structure, Date Formatting (`date-fns`). |
+| **`SocialLogin.jsx`** (Right Aside) | Component with placeholder buttons for Google & GitHub—**ready for Firebase Auth integration in the next module.** | UI readiness for next Auth phase. |
 
 ---
 
@@ -85,7 +85,7 @@ Dragon News is a news platform interface inspired by real-world news portals. It
 | **React (Vite)** | Core component-based UI library. |
 | **Tailwind CSS** | Utility-first styling framework. |
 | **DaisyUI** | Tailwind component library for rapid UI construction. |
-| **react-router** | Handles SPA navigation, nested routes, and data loaders. |
+| **react-router** | Handles SPA navigation, nested routes & data loaders. |
 | **date-fns** | Library for reliable date formatting. |
 | **react-fast-marquee** | Component for creating smooth news tickers. |
 
@@ -116,7 +116,7 @@ npm run dev
 - ✅ Dynamic category-based news filtering
 - ✅ “Today’s Pick” news logic
 - ✅ Modular layout structure
-- ✅ Clean and responsive UI
+- ✅ Clean & responsive UI
 - ✅ Marquee-based live headlines
 - ✅ Ready for Firebase Authentication integration (Next Module)
 
