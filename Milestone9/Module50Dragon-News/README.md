@@ -1,4 +1,4 @@
-# 📰 📰 Dragon News - Module 50 (React + Vite + Tailwind + DaisyUI)
+# 📰 Dragon News - Module 50 (React + Vite + Tailwind + DaisyUI)
 
 A fully functional **React News Portal UI** built as part of **Milestone 9 (Module 50)**.  
 This project demonstrates React Router, dynamic routes, JSON data rendering & a modular layout system —  designed with **TailwindCSS**, **DaisyUI** & **modern React best practices**.
@@ -7,9 +7,7 @@ This project demonstrates React Router, dynamic routes, JSON data rendering & a 
 
 ## 🚀 Project Overview
 
-Dragon News is a news platform interface inspired by real-world news portals.  
-It features category-based filtering, modular layouts, reusable components,  
-and data-driven rendering using static JSON files (`news.json`, `categories.json`).
+Dragon News is a news platform interface inspired by real-world news portals. It features category-based filtering, modular layouts, reusable components and data-driven rendering using static JSON files (`news.json`, `categories.json`).
 
 ---
 
