@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 import app from '../firebase/firebase.config';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { useEffect } from 'react';
 
 // Step 1 - Create a context
@@ -16,10 +16,19 @@ const AuthProvider = ({children}) => {
     // State for our user
     const [user, setUser] = useState(null);
 
-    // func to signup user
+    // func to signup/create user
     const createUser = (email, password) => {
-
         return createUserWithEmailAndPassword(auth, email, password);
+    };
+
+    //login function
+    const signIn = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password);
+    }
+
+    // func to sign out/log out user
+    const logOut = () => {
+        return signOut(auth);
     };
 
     // observer
@@ -38,6 +47,8 @@ const AuthProvider = ({children}) => {
         user:user,  // same as writing "user" only like the below one
         setUser,  // setUser:setUser (same)
         createUser,
+        logOut,
+        signIn
     }
 
     return (
