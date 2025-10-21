@@ -1,9 +1,12 @@
-import React, { use } from 'react';
-import { Link } from 'react-router';
+import React, { use, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 
 const Login = () => {
+    const [error, setError] = useState("");
     const {signIn} = use(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
     const handleLogin = (e) =>{
         e.preventDefault();
         const form = e.target;
@@ -14,11 +17,13 @@ const Login = () => {
             .then(result=>{
                 const user = result.user;
                 console.log(user);
+                navigate(`${location.state? location.state : "/"}`);
             })
             .catch((error)=>{
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                alert(errorCode,errorMessage);
+                // alert(errorCode,errorMessage);
+                setError(errorCode);
             })
     }
 
@@ -33,12 +38,21 @@ const Login = () => {
 
                         {/* email */}
                         <label class="label">Email</label>
-                        <input name="email" type="email" class="input" placeholder="Email" />
+                        <input name="email" type="email" class="input" placeholder="Email" required />
 
                         {/* password */}
                         <label class="label">Password</label>
-                        <input name="password" type="password" class="input" placeholder="Password" />
+                        <input name="password" type="password" class="input" placeholder="Password" required />
+                        
+                        {/* forgot password div */}
                         <div><a class="link link-hover">Forgot password?</a></div>
+
+                        {/* conditional error div */}
+                        {
+                            error && <p className='text-red-400'>
+                                {error}
+                            </p>
+                        }
                         
                         {/* button */}
                         <button type='submit' class="btn btn-neutral mt-4">
