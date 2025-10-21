@@ -1,7 +1,6 @@
 # 🐉 Dragon News — React + Firebase Authentication + Router
 
-A fully responsive, modern **news portal web app** built with **React 19**, **React Router 7**, **Firebase Authentication**, and **TailwindCSS + DaisyUI**.  
-Hosted on Firebase — [Live Demo 🚀](https://dragon-news-cfab2.web.app)
+A fully responsive, modern **news portal web app** built with **React 19**, **React Router 7**, **Firebase Authentication** & **TailwindCSS + DaisyUI**. 
 
 ---
 
