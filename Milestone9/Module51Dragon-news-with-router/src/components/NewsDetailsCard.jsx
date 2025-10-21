@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 
 const NewsDetailsCrad = ({news}) => {
-    console.log(news);
+    // console.log(news);
     return (
         <div className='space-y-5'>
             <img className='w-full h-[450px] object-cover' src={news.image_url} alt="" />
