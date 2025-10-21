@@ -8,7 +8,7 @@ const Navbar = () => {
   // user coming from authcontext
   const {user, logOut} = use(AuthContext);
   const handleLogOut = () => {
-    console.log("user tryn to logout");
+    // console.log("user tryn to logout");
     logOut()
       .then(() => {
         // Sign-out successful.
@@ -29,11 +29,12 @@ const Navbar = () => {
         <NavLink to="/career">Career</NavLink>
       </div>
       <div className="login-btn flex gap-5">
-        <img src={userIcon} alt="" />
-        {user ? (
-          <Link onClick={handleLogOut} className="btn btn-primary px-10 ">
+        <img className="w-12 rounded-full" 
+          src={`${user ? user.photoURL : userIcon}`} alt="" />
+          {user ? (
+        <Link onClick={handleLogOut} className="btn btn-primary px-10 ">
             Log Out
-          </Link>
+        </Link>
         ) : (
           <Link to="/auth/login" className="btn btn-primary px-10 ">
             Login

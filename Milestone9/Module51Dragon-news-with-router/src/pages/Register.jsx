@@ -1,10 +1,12 @@
 import React, { use, useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 
 const Register = () => {
-    const {createUser, setUser} = use(AuthContext);
+    const {createUser, setUser, updateUser} = use(AuthContext);
     const [nameError, setNameError] = useState("");
+
+    const navigate = useNavigate();
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -16,15 +18,25 @@ const Register = () => {
         else{
             setNameError("")
         }
-        const photourl = form.photourl.value;
+        const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log({name, photourl, email, password});
+        // console.log({name, photo, email, password});
+
         createUser(email, password)
         .then(result =>{
             const user = result.user;
-            console.log(user);
-            setUser(user);
+            // console.log(user);
+            updateUser({
+                displayName: name, photoURL: photo,
+            }).then(()=>{
+                setUser({ ...user, displayName: name, photoURL: photo });
+                navigate("/");
+                
+            }).catch((error)=>{
+                // console.log(error);
+                setUser(user);
+            })
         })
         .catch((error)=>{
             const errorCode = error.code;  
@@ -52,7 +64,7 @@ const Register = () => {
                         
                         {/* photo URL */}
                         <label class="label">Photo URL</label>
-                        <input name='photourl' type="email" class="input" placeholder="Photo URL required" />
+                        <input name='photo' type="text" class="input" placeholder="Photo URL required" />
                         
                         {/* email */}
                         <label class="label">Email</label>
