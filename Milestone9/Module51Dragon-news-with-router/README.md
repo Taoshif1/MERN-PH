@@ -7,7 +7,7 @@ Hosted on Firebase — [Live Demo 🚀](https://dragon-news-cfab2.web.app)
 
 ## 🌐 Live Project
 
-🔗 **Website URL:** [https://dragon-news-cfab2.web.app](https://dragon-news-cfab2.web.app)
+🔗 **Website URL:** [Dragon News Web App](https://dragon-news-cfab2.web.app)
 
 ---
 
@@ -15,7 +15,7 @@ Hosted on Firebase — [Live Demo 🚀](https://dragon-news-cfab2.web.app)
 
 ✅ **Authentication System**
 - Firebase Email + Password Auth
-- Register, Login, and Logout functionality
+- Register, Login & Logout functionality
 - Protected route for viewing detailed news (`PrivateRoute`)
 
 ✅ **Routing & Layouts**
@@ -26,13 +26,13 @@ Hosted on Firebase — [Live Demo 🚀](https://dragon-news-cfab2.web.app)
 
 ✅ **UI/UX**
 - Fully responsive layout
-- Modern and minimal design using **TailwindCSS + DaisyUI**
-- Smooth animations and loading states
+- Modern & minimal design using **TailwindCSS + DaisyUI**
+- Smooth animations & loading states
 
 ✅ **Data Handling**
 - Dynamic category filtering via `categories.json`
 - Data loaded from `news.json`
-- News detail view with share, rating, and author info
+- News detail view with share, rating & author info
 
 ✅ **Extras**
 - `React Fast Marquee` for Latest News
@@ -70,7 +70,7 @@ Hosted on Firebase — [Live Demo 🚀](https://dragon-news-cfab2.web.app)
 | **Navbar.jsx** | Responsive navigation bar with user info + auth buttons |
 | **Register.jsx** | Handles new user creation, validation & profile update |
 | **Login.jsx** | Handles user login + redirects + error handling |
-| **HomeLayout.jsx** | Core layout with header, left/right aside, and outlet |
+| **HomeLayout.jsx** | Core layout with header, left/right aside & outlet |
 | **PrivateRoute.jsx** | Guards restricted pages (e.g., NewsDetails) |
 | **firebase.config.js** | Firebase initialization |
 | **info.js** | (Optional) Developer notes/documentation |
@@ -156,4 +156,4 @@ firebase deploy
 
 ---
 
-# 💬 "Built with passion, designed with precision — Dragon News delivers stories with fire." 🔥
+# 💬 Built with passion, designed with precision — Dragon News delivers stories with fire. 🔥
