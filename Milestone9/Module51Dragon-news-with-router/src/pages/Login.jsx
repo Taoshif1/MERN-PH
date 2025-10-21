@@ -42,7 +42,7 @@ const Login = () => {
                         
                         {/* button */}
                         <button type='submit' class="btn btn-neutral mt-4">
-                            Register
+                            Login
                         </button>
 
                         <p className='font-semibold text-center pt-5'>
