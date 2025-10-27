@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Aura X Pro",
+    "price": 999.99,
+    "desc": "The ultimate flagship experience with a triple-lens camera and stunning OLED display. Perfect for photography enthusiasts.",
+    "img": "/images/aura_x_pro.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Nova S20 Lite",
+    "price": 449.50,
+    "desc": "A powerful and affordable option featuring fast charging and a durable, sleek design. Excellent value.",
+    "img": "/images/nova_s20_lite.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Zenith 5G Ultra",
+    "price": 1299.00,
+    "desc": "Next-generation 5G connectivity and a massive 1TB storage option for the heavy user. Unmatched performance.",
+    "img": "/images/zenith_5g_ultra.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Echo Compact",
+    "price": 599.99,
+    "desc": "Designed for one-handed use, this compact phone doesn't compromise on battery life or processing speed.",
+    "img": "/images/echo_compact.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Vortex Pro Max",
+    "price": 1099.00,
+    "desc": "A gaming powerhouse with an incredibly smooth 144Hz refresh rate display and advanced cooling system.",
+    "img": "/images/vortex_pro_max.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Lumina Classic",
+    "price": 299.00,
+    "desc": "Reliable and easy to use, ideal for basic communication and essential apps. Great starter phone.",
+    "img": "/images/lumina_classic.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Spectra Z Fold",
+    "price": 1799.99,
+    "desc": "Revolutionary foldable technology turning your phone into a tablet instantly. Future of mobile.",
+    "img": "/images/spectra_z_fold.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Pico Mini SE",
+    "price": 349.99,
+    "desc": "The smallest device in the lineup, featuring surprising camera quality in a pocket-friendly shell.",
+    "img": "/images/pico_mini_se.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Titan Endurance",
+    "price": 799.50,
+    "desc": "Built for the outdoors with extreme durability, water resistance, and a 7-day extended battery life.",
+    "img": "/images/titan_endurance.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Celestial View",
+    "price": 899.00,
+    "desc": "Focuses purely on media consumption with a stunning edge-to-edge display and powerful stereo speakers.",
+    "img": "/images/celestial_view.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Aura X Base",
+    "price": 799.99,
+    "desc": "The standard model of the Aura series, offering premium features at a more accessible price point.",
+    "img": "/images/aura_x_base.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Nova S20 Pro",
+    "price": 649.50,
+    "desc": "A step up from the Lite, adding enhanced processing power and improved night mode photography.",
+    "img": "/images/nova_s20_pro.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Zenith 4G Standard",
+    "price": 249.00,
+    "desc": "An entry-level device that covers all the necessities for daily communication and web browsing.",
+    "img": "/images/zenith_4g_standard.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Echo Slim Plus",
+    "price": 699.00,
+    "desc": "Incredibly thin and light, making it a stylish choice without sacrificing performance or screen size.",
+    "img": "/images/echo_slim_plus.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Vortex Standard",
+    "price": 850.99,
+    "desc": "High-performance chipset and a smooth display make this a great all-around phone for power users.",
+    "img": "/images/vortex_standard.jpg"
+  }
+]
