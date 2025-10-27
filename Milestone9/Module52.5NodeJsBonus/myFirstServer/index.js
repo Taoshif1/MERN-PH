@@ -2,6 +2,11 @@ const express = require('express');  // before import[ES6] require was used
 const phones = require('./phones.json');
 const app = express();              // create a app with the express
 const port = 5000;                 // then declare a port
+const cors = require('cors');
+
+
+// middleware (cors)
+app.use(cors());
 
 // func to get data app.get('route', function)
 app.get('/', (req, res)=>{

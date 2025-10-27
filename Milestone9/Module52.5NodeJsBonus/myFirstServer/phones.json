@@ -1,107 +1,107 @@
 [
   {
     "id": 1,
-    "name": "Aura X Pro",
-    "price": 999.99,
-    "desc": "The ultimate flagship experience with a triple-lens camera and stunning OLED display. Perfect for photography enthusiasts.",
-    "img": "/images/aura_x_pro.jpg"
+    "name": "Apple iPhone 15 Pro Max",
+    "price": 1199.00,
+    "desc": "The ultimate flagship experience with a triple-lens camera and stunning OLED display. Features the A17 Bionic chip.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   },
   {
     "id": 2,
-    "name": "Nova S20 Lite",
-    "price": 449.50,
-    "desc": "A powerful and affordable option featuring fast charging and a durable, sleek design. Excellent value.",
-    "img": "/images/nova_s20_lite.jpg"
+    "name": "Samsung Galaxy S23 FE",
+    "price": 699.00,
+    "desc": "A powerful and affordable option featuring fast charging and a durable, sleek design. Excellent value for money.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   },
   {
     "id": 3,
-    "name": "Zenith 5G Ultra",
-    "price": 1299.00,
-    "desc": "Next-generation 5G connectivity and a massive 1TB storage option for the heavy user. Unmatched performance.",
-    "img": "/images/zenith_5g_ultra.jpg"
+    "name": "Google Pixel 8 Pro",
+    "price": 999.00,
+    "desc": "Next-generation Tensor G3 chip and a massive focus on AI and computational photography. Unmatched software performance.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   },
   {
     "id": 4,
-    "name": "Echo Compact",
-    "price": 599.99,
-    "desc": "Designed for one-handed use, this compact phone doesn't compromise on battery life or processing speed.",
-    "img": "/images/echo_compact.jpg"
+    "name": "Xiaomi 13 Lite",
+    "price": 499.00,
+    "desc": "Designed for portability, this compact phone doesn't compromise on battery life or processing speed. Very thin design.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   },
   {
     "id": 5,
-    "name": "Vortex Pro Max",
-    "price": 1099.00,
-    "desc": "A gaming powerhouse with an incredibly smooth 144Hz refresh rate display and advanced cooling system.",
-    "img": "/images/vortex_pro_max.jpg"
+    "name": "OnePlus 11 Pro",
+    "price": 899.00,
+    "desc": "A gaming powerhouse with an incredibly smooth 120Hz refresh rate display and blazing-fast charging speed.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   },
   {
     "id": 6,
-    "name": "Lumina Classic",
-    "price": 299.00,
-    "desc": "Reliable and easy to use, ideal for basic communication and essential apps. Great starter phone.",
-    "img": "/images/lumina_classic.jpg"
+    "name": "Motorola G Power 2023",
+    "price": 249.00,
+    "desc": "Reliable and easy to use, ideal for basic communication and essential apps. Famous for its multi-day battery life.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   },
   {
     "id": 7,
-    "name": "Spectra Z Fold",
+    "name": "Samsung Galaxy Z Fold5",
     "price": 1799.99,
-    "desc": "Revolutionary foldable technology turning your phone into a tablet instantly. Future of mobile.",
-    "img": "/images/spectra_z_fold.jpg"
+    "desc": "Revolutionary foldable technology turning your phone into a tablet instantly. Perfect for multitasking and productivity.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   },
   {
     "id": 8,
-    "name": "Pico Mini SE",
-    "price": 349.99,
-    "desc": "The smallest device in the lineup, featuring surprising camera quality in a pocket-friendly shell.",
-    "img": "/images/pico_mini_se.jpg"
+    "name": "Apple iPhone SE (3rd Gen)",
+    "price": 429.00,
+    "desc": "The smallest device in the current Apple lineup, featuring A15 Bionic performance in a pocket-friendly shell.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   },
   {
     "id": 9,
-    "name": "Titan Endurance",
+    "name": "Samsung Galaxy XCover 6 Pro",
     "price": 799.50,
-    "desc": "Built for the outdoors with extreme durability, water resistance, and a 7-day extended battery life.",
-    "img": "/images/titan_endurance.jpg"
+    "desc": "Built for the outdoors with extreme durability, water resistance, and user-replaceable battery for field work.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   },
   {
     "id": 10,
-    "name": "Celestial View",
-    "price": 899.00,
-    "desc": "Focuses purely on media consumption with a stunning edge-to-edge display and powerful stereo speakers.",
-    "img": "/images/celestial_view.jpg"
+    "name": "Sony Xperia 1 V",
+    "price": 1299.00,
+    "desc": "Focuses purely on media consumption with a stunning 4K OLED display and powerful stereo speakers. Great for filmmakers.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   },
   {
     "id": 11,
-    "name": "Aura X Base",
+    "name": "Apple iPhone 15",
     "price": 799.99,
-    "desc": "The standard model of the Aura series, offering premium features at a more accessible price point.",
-    "img": "/images/aura_x_base.jpg"
+    "desc": "The standard model of the iPhone series, offering premium features with the Dynamic Island and USB-C port.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   },
   {
     "id": 12,
-    "name": "Nova S20 Pro",
-    "price": 649.50,
-    "desc": "A step up from the Lite, adding enhanced processing power and improved night mode photography.",
-    "img": "/images/nova_s20_pro.jpg"
+    "name": "Samsung Galaxy S24+",
+    "price": 999.50,
+    "desc": "A premium device with enhanced processing power and improved AI features powered by Galaxy AI.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   },
   {
     "id": 13,
-    "name": "Zenith 4G Standard",
-    "price": 249.00,
-    "desc": "An entry-level device that covers all the necessities for daily communication and web browsing.",
-    "img": "/images/zenith_4g_standard.jpg"
+    "name": "Nokia G22",
+    "price": 199.00,
+    "desc": "An entry-level device designed for self-repairability, covering all the necessities for daily communication.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   },
   {
     "id": 14,
-    "name": "Echo Slim Plus",
-    "price": 699.00,
-    "desc": "Incredibly thin and light, making it a stylish choice without sacrificing performance or screen size.",
-    "img": "/images/echo_slim_plus.jpg"
+    "name": "Google Pixel 7a",
+    "price": 499.00,
+    "desc": "Incredibly thin and light, making it a stylish choice without sacrificing performance or screen size. Mid-range champ.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   },
   {
     "id": 15,
-    "name": "Vortex Standard",
-    "price": 850.99,
-    "desc": "High-performance chipset and a smooth display make this a great all-around phone for power users.",
-    "img": "/images/vortex_standard.jpg"
+    "name": "Asus ROG Phone 8 Pro",
+    "price": 1199.00,
+    "desc": "The ultimate high-performance chipset and a smooth display make this a great all-around phone for competitive mobile gamers.",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR14qUZqT0M49gz5cv1skXQuWjXUKC0RLAXTQ&s"
   }
 ]
