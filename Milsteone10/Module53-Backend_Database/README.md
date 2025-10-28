@@ -124,7 +124,7 @@ npm run dev
 
 ---
 
-📸 Preview
+## 📸 Preview
 
 1. Font-End
 ![alt text](image-1.png)
