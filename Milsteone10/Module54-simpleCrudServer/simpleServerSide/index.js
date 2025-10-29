@@ -41,12 +41,18 @@ async function run() {
     const usersDB = client.db('usersDB');
     const usersCollection = usersDB.collection('users');
 
+    // find value or Read value => R
+    app.get('/users', async(req, res)=> {
+      const cursor = usersCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
+    })
     
     // add database related apis here
     app.post('/users', async(req, res)=>{
       const newUser = req.body;
       console.log('New User: ',newUser);
-      //insert user in DB
+      //insert/create user in DB => C
       const result = await usersCollection.insertOne(newUser);
       res.send(result);
     })
