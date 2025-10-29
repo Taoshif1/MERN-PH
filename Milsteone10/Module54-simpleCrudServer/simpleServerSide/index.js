@@ -20,6 +20,7 @@ const client = new MongoClient(uri, {
   }
 });
 
+// database has no connection outside run() function
 app.get('/', (req, res)=>{
     res.send(`Simple CRUD server is running on WEB PORT: ${port}`);
 })
@@ -30,10 +31,26 @@ app.get('/', (req, res)=>{
 // }
 // run().catch(console.dir)
 
+// database connection
 async function run() {
     try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
+
+    //create users database & a collection
+    const usersDB = client.db('usersDB');
+    const usersCollection = usersDB.collection('users');
+
+    
+    // add database related apis here
+    app.post('/users', async(req, res)=>{
+      const newUser = req.body;
+      console.log('New User: ',newUser);
+      //insert user in DB
+      const result = await usersCollection.insertOne(newUser);
+      res.send(result);
+    })
+
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
@@ -42,6 +59,7 @@ async function run() {
     // await client.close();
     }
 }
+
 run().catch(console.dir)
 
 
