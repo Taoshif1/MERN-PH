@@ -3,7 +3,7 @@
 A simple yet powerful CRUD Application built using Node.js, Express, MongoDB, and React.js.
 This project demonstrates how to connect the backend with a cloud database (MongoDB Atlas), and perform Create, Read, Update, Delete operations seamlessly.
 
-**
+---
 
 # 🚀 Features
 
@@ -15,7 +15,7 @@ This project demonstrates how to connect the backend with a cloud database (Mong
 - ✅ Real-time user addition and deletion from the database
 - ✅ Modular, clean structure — perfect for beginners learning MERN
 
-**
+---
 
 # 🛠️ Technology Stack
 
@@ -26,7 +26,7 @@ API/DB Driver,mongodb package,Connects Express to MongoDB and handles queries.
 Frontend,React (Vite),The user interface for interaction.
 Routing,React Router DOM,Handles client-side navigation and data fetching via loader.
 
-**
+---
 
 # ⚙️ Project Structure
 
@@ -46,7 +46,7 @@ Routing,React Router DOM,Handles client-side navigation and data fetching via lo
  ┃ ┗ 📜 package.json
  ┗ 📜 README.md
 ```
-**
+---
 
 # 🔧 Backend Setup (Server)
 
@@ -82,7 +82,7 @@ const uri = "mongodb+srv://<username>:<password>@cluster0.mongodb.net/?appName=C
 | PATCH  | `/users/:id` | Update existing user              |
 | DELETE | `/users/:id` | Delete user by ID                 |
 
-**
+---
 
 # 💻 Frontend Setup (Client)
 
@@ -107,14 +107,14 @@ npm run dev
 | `/users/:id`  | userDetail.jsx | Shows user details         |
 | `/update/:id` | updateUser.jsx | Edit existing user info    |
 
-** 
+---
 
 # 📸 Screenshots
 
 ![Home Page](image.png)
 ![Edt Page](image-1.png)
 
-**
+---
 
 # 🧩 CRUD Workflow
 
@@ -123,7 +123,7 @@ npm run dev
 - 3️⃣ Update – Edit user data with PATCH
 - 4️⃣ Delete – Remove user via DELETE endpoint
 
-**
+---
 
 ## 🧠 Learnings from Module 54
 
