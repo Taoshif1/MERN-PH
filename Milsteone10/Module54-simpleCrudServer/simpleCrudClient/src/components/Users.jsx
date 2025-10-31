@@ -7,7 +7,7 @@ const Users = ({usersPromise}) => {
     console.log(initialUsers);
     const [users, setUsers] = useState(initialUsers);
 
-    const handleAddUser = (e) => {
+    const handleAddUser = e => {
         e.preventDefault();
 
         const name = e.target.name.value;
@@ -37,8 +37,25 @@ const Users = ({usersPromise}) => {
             })
         
     }
+
+    const hanndleDeleteUser = (id) => {
+        console.log('Delete user btn clicked, ID -> ', id);
+        fetch(`http://localhost:3000/users/${id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data =>{
+                console.log('After delete -> ', data)
+                if(data.deletedCount){
+                    alert('deleted successfully');
+                }
+            })
+    }
+
+
   return (
     <div>
+        <h3>Users: {users.length}</h3>
         <form onSubmit={handleAddUser}>
             <input type="text" name='name' id='name' placeholder='name'/>
             <br />
@@ -51,7 +68,7 @@ const Users = ({usersPromise}) => {
             {
             users.map(user => <p key={user._id}>
                 {user.name} - {user.email}
-                <button>X</button>
+                <button onClick={()=>hanndleDeleteUser(user._id)}>X</button>
                 </p> )
         }
         </div>
