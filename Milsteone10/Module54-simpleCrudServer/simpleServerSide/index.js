@@ -8,8 +8,13 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// mongoDB ONLINE version
 // mongoDB: simpleDBUser - d1F69hx7hPo2bzUA
 const uri = "mongodb+srv://simpleDBUser:d1F69hx7hPo2bzUA@cluster0.kpmcxd4.mongodb.net/?appName=Cluster0";
+
+// use mongoDB offline
+// const uri = 'mongodb://localhost:27017'
+
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
