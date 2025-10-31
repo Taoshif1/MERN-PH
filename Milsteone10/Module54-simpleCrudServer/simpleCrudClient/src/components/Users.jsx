@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { use } from 'react';
+import { Link } from 'react-router';
 
 const Users = ({usersPromise}) => {
     const initialUsers = use(usersPromise);
@@ -48,6 +49,8 @@ const Users = ({usersPromise}) => {
                 console.log('After delete -> ', data)
                 if(data.deletedCount){
                     alert('deleted successfully');
+                    const remainingUsers = users.filter(user => user._id !== id);
+                    setUsers(remainingUsers);
                 }
             })
     }
@@ -66,10 +69,11 @@ const Users = ({usersPromise}) => {
         <p>----------------------------------------</p>
         <div>
             {
-            users.map(user => <p key={user._id}>
-                {user.name} - {user.email}
-                <button onClick={()=>hanndleDeleteUser(user._id)}>X</button>
-                </p> )
+                users.map(user => <p key={user._id}>
+                    {user.name} - {user.email}
+                    <Link to={`/users/${user._id}`}>Details</Link>
+                    <button onClick={()=>hanndleDeleteUser(user._id)}>X</button>
+                    </p> )
         }
         </div>
     </div>

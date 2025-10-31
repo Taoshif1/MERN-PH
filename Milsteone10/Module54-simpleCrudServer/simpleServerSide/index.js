@@ -47,6 +47,17 @@ async function run() {
       const result = await cursor.toArray();
       res.send(result);
     })
+
+    // find specific id (almost same as delete)
+    app.get('/users/:id', async(req, res)=>{
+      const id = req.params.id;
+      console.log('Need user with ID: ', id);
+      const query = {_id: new ObjectId(id)};
+      const result = await usersCollection.findOne(query);
+      res.send(result);
+
+    })
+
     
     // add database related apis here
     app.post('/users', async(req, res)=>{
@@ -57,7 +68,9 @@ async function run() {
       res.send(result);
     })
 
-    // delete users
+
+
+    // delete user of a specific id
     app.delete('/users/:id', async(req, res)=>{
       console.log(req.params.id);
       const id = req.params.id; 
