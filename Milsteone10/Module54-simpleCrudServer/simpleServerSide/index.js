@@ -68,6 +68,23 @@ async function run() {
       res.send(result);
     })
 
+    // patch
+    app.patch('/users/:id', async(req, res)=>{
+      const id = req.params.id;
+      const updatedUser = req.body;
+      console.log("To Update -> ", id, updatedUser);
+      const query = { _id: new ObjectId(id)};
+      const update = {
+        $set: {
+            name: updatedUser.name,
+            email: updatedUser.email,
+        }
+      }
+      const options = {};
+      const result = await usersCollection.updateOne(query, update, options);
+      res.send(result);
+    })
+
 
 
     // delete user of a specific id
