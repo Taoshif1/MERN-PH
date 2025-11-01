@@ -426,6 +426,15 @@ This project is **not open source** & not available for learning purposes. Conta
 
 
 ---
+## 🎓 Acknowledgments
+
+- **Programming Hero** - For the comprehensive MERN Stack course
+- **MongoDB** - For database management insights
+- **Firebase** - For simplified authentication
+- **React Documentation** - For excellent learning resources
+- **Stack Overflow Community** - For problem-solving support
+
+---
 
 <div align="center">
 
@@ -437,26 +446,14 @@ This project is **not open source** & not available for learning purposes. Conta
 
 ---
 
-## 🎓 Acknowledgments
-
-- **Programming Hero** - For the comprehensive MERN Stack course
-- **MongoDB** - For database management insights
-- **Firebase** - For simplified authentication
-- **React Documentation** - For excellent learning resources
-- **Stack Overflow Community** - For problem-solving support
-
----
 
 ⭐ **Star this repo if you find it helpful!** ⭐
 
 *Last Updated: November 2025*
 
-</div>
-
 
 ---
 
-<div align="center">
 
 **[⬆ Back to Top](#-smart-deals)**
 
