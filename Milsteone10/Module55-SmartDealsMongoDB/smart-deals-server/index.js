@@ -36,7 +36,21 @@ async function run(){
 
         // get api
         app.get('/products', async(req, res)=>{
+
+            // const cursor = productsCollection.find().sort({price_min: 1}).limit(5);  // .limit(how many times u want)
+
+            // we can also show data = 1 & dont show = 0
+            // const projectFields = { title : 1, price_min: 1, price_max: 1, image: 1}
+
+            // const cursor = productsCollection.find().sort({price_min: 1}).limit(5).project(projectFields); // for sorting 1 = ascending, -1 = descending
+
+            // const cursor = productsCollection.find().sort({price_min: 1})
+            // .project(projectFields); // for sorting 1 = ascending, -1 = descending
+
+            // we can also use skip(how many times u want)
+            
             const cursor = productsCollection.find();
+            
             const result = await cursor.toArray();
             res.send(result);
         })
