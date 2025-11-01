@@ -35,6 +35,23 @@ async function run(){
         const productsCollection = db.collection('products')
 
         const bidsCollection = db.collection('bids');
+        const usersCollection = db.collection('users');
+
+
+        //checking for same email during login=> not adding it in DB again
+        app.post('/users', async(req, res) => {
+            const newUser = req.body;
+            const email = req.body.email;
+            const query = { email: email}
+            const existingUser = await usersCollection.findOne(query);
+
+            if(existingUser){
+                res.send({message: 'User Already Exists, No need to add again in BD'})
+            }else{
+                const result = await usersCollection.insertOne(newUser);
+                res.send(result);
+            }
+        })
 
         // get api
         app.get('/products', async(req, res)=>{
@@ -108,6 +125,7 @@ async function run(){
         app.get('/bids', async(req, res)=>{
             const email = req.query.email;
             const query = {};
+
             if(email){
                 query.buyer_email = email;
             }
@@ -116,15 +134,21 @@ async function run(){
             const result = await cursor.toArray();
             res.send(result);
         })
+
+        app.post('/bids', async(req, res)=>{
+            const newBid = req.body;
+            const result = await bidsCollection.insertOne(newBid);
+            res.send(result);
+        })
         
         //sending ping cmd to verify connection
         await client.db("admin").command({ping:1});
         console.log("Pinged your deployment. You Successfully connected to MongoDB!");
+        }
+        
+        finally{
 
-    }
-    finally{
-
-    }
+        }
 }
 
 // calling the run()
