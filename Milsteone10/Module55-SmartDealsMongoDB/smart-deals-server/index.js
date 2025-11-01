@@ -49,8 +49,10 @@ async function run(){
 
             // we can also use skip(how many times u want)
             
+            console.log(req.query);
+
             const cursor = productsCollection.find();
-            
+
             const result = await cursor.toArray();
             res.send(result);
         })
