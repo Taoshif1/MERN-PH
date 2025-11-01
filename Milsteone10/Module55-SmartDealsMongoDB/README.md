@@ -437,14 +437,6 @@ This project is **not open source** & not available for learning purposes. Conta
 
 ---
 
-⭐ **Star this repo if you find it helpful!** ⭐
-
-*Last Updated: November 2025*
-
-</div>
-
----
-
 ## 🎓 Acknowledgments
 
 - **Programming Hero** - For the comprehensive MERN Stack course
@@ -452,6 +444,15 @@ This project is **not open source** & not available for learning purposes. Conta
 - **Firebase** - For simplified authentication
 - **React Documentation** - For excellent learning resources
 - **Stack Overflow Community** - For problem-solving support
+
+---
+
+⭐ **Star this repo if you find it helpful!** ⭐
+
+*Last Updated: November 2025*
+
+</div>
+
 
 ---
 
