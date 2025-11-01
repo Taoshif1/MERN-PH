@@ -1,4 +1,4 @@
-# 🚀 Smart Deals - Full Stack MERN Marketplace
+# 🚀 Smart Deals 
 
 <div align="center">
 
@@ -12,7 +12,6 @@
 
 **A Modern Bidding & Deals Platform Built with Passion 💙**
 
-[Live Demo](#) | [Documentation](../../wiki) | [Report Bug](#) | [Request Feature](#)
 
 </div>
 
@@ -346,7 +345,7 @@ Response: "Smart Deals Server"
 
 ## 📸 Screenshots
 
-> *Screenshots will be added as the UI development progresses*
+> ![alt text](image.png)
 
 ---
 
@@ -423,17 +422,8 @@ Contributions, issues, and feature requests are welcome! This is a learning proj
 
 ## 📄 License
 
-This project is **open source** and available for learning purposes. Feel free to use it as reference for your own projects!
+This project is **not open source** & not available for learning purposes. Contact me before using it.
 
----
-
-## 📧 Contact
-
-**Your Name** - [Your Email](mailto:your.email@example.com)
-
-**Project Link**: [https://github.com/yourusername/smart-deals](https://github.com/yourusername/smart-deals)
-
-**LinkedIn**: [Your LinkedIn Profile](#)
 
 ---
 
@@ -458,7 +448,7 @@ This project is **open source** and available for learning purposes. Feel free t
 ## 🎓 Acknowledgments
 
 - **Programming Hero** - For the comprehensive MERN Stack course
-- **MongoDB University** - For database management insights
+- **MongoDB** - For database management insights
 - **Firebase** - For simplified authentication
 - **React Documentation** - For excellent learning resources
 - **Stack Overflow Community** - For problem-solving support
@@ -467,6 +457,6 @@ This project is **open source** and available for learning purposes. Feel free t
 
 <div align="center">
 
-**[⬆ Back to Top](#-smart-deals---full-stack-mern-marketplace)**
+**[⬆ Back to Top](#-smart-deals)**
 
 </div>
