@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { use } from 'react';
+import Product from '../Product/Product';
+import { useLoaderData } from 'react-router';
 
 const ProductDetails = () => {
-  return (
+    const Product = useLoaderData();
+    console.log(Product)
+  
+    return (
     <div>
-        pdeatils page
+        pdeatils page;
     </div>
   )
 }
