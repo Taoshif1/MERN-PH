@@ -8,11 +8,11 @@ const Home = () => {
       
       {/* Background Images */}
       <img 
-        src={bgLeft} // Path to your left background image
+        src={bgLeft} // left background image
         alt="Background Left"
         className="absolute top-0 left-0 w-1/4 h-full object-contain opacity-70 transform -translate-x-1/4 hidden md:block"/>
       <img
-        src={bgRight} // Path to your right background image
+        src={bgRight} // right background image
         alt="Background Right"
         className="absolute top-0 right-0 w-1/4 h-full object-contain opacity-70 transform translate-x-1/4 hidden md:block"/>
 
