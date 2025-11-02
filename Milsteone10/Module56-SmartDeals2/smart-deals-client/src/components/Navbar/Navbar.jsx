@@ -37,7 +37,7 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <a class="btn btn-ghost text-xl">Smart<span>Deals</span></a>
+            <a class="btn btn-ghost text-xl font-bold">Smart<span className='text-primary'>Deals</span></a>
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
@@ -47,7 +47,7 @@ const Navbar = () => {
         <div class="navbar-end">
             {
                 user ? 
-                <a onClick={handleSignOut} class="btn">Logout</a> :  
+                <a onClick={handleSignOut} class="btn btn-primary">Logout</a> :  
                 <Link to='/register'>Login</Link>         
             }
         </div>
