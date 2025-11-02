@@ -30,14 +30,15 @@ async function run(){
     try{
         await client.connect();  // we can also connect in other ways below
         
-        // create a DB & a Collection in our Client
+        // create a DB & then Collections in our Client
         const db = client.db('Smart_DB')
-        const productsCollection = db.collection('products')
 
+        const productsCollection = db.collection('products')
         const bidsCollection = db.collection('bids');
         const usersCollection = db.collection('users');
 
 
+        // USERS API
         //checking for same email during login=> not adding it in DB again
         app.post('/users', async(req, res) => {
             const newUser = req.body;
@@ -53,7 +54,7 @@ async function run(){
             }
         })
 
-        // get api
+        // PRODUCTS APIs
         app.get('/products', async(req, res)=>{
 
             // const cursor = productsCollection.find().sort({price_min: 1}).limit(5);  // .limit(how many times u want)
@@ -77,6 +78,12 @@ async function run(){
 
             const cursor = productsCollection.find();
 
+            const result = await cursor.toArray();
+            res.send(result);
+        })
+
+        app.get("/latest-products", async(req, res) =>{
+            const cursor = productsCollection.find().sort({created_at: -1}).limit(6);
             const result = await cursor.toArray();
             res.send(result);
         })
