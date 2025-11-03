@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router";
 import { AuthContext } from "../../context/AuthContext";
 
 const ProductDetails = () => {
-  const {_id}  = useLoaderData();
+  const {_id: productId}  = useLoaderData();
   const bidModalRef = useRef(null);
   const { user } = use(AuthContext);
 
@@ -21,7 +21,31 @@ const ProductDetails = () => {
     const email = e.target.email.value;
     const bid = e.target.bid.value;
 
-    console.log("Name email bid -> ", _id, name, email, bid)
+    console.log("Name email bid -> ", productId, name, email, bid);
+
+    const newBid = {
+      product: productId,
+      buyer_name: name,
+      buyer_email: email,
+      bid_price: bid,
+      status: 'pending'
+    }
+
+    fetch('http://localhost:3000/bids', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(newBid)
+    })
+    .then(res => res.json())
+    .then(data =>{
+      console.log('After placing bid: ', data);
+    })
+    .catch(err => {
+      console.log(err);
+    })
+
   }
 
   return (
