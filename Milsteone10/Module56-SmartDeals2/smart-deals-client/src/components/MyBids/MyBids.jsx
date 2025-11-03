@@ -1,47 +1,74 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import Swal from 'sweetalert2';
 
 const MyBids = () => {
   const { user } = useContext(AuthContext);
   const [bids, setBids] = useState([]);
 
   useEffect(() => {
-  if (user?.email) {
-    fetch(`http://localhost:3000/bids?email=${user.email}`)
-      .then(res => res.json())
-      .then(async (bidsData) => {
-        // Fetch all products
-        const res = await fetch(`http://localhost:3000/products`);
-        const products = await res.json();
+    if (user?.email) {
+      fetch(`http://localhost:3000/bids?email=${user.email}`)
+        .then((res) => res.json())
+        .then(async (bidsData) => {
+          // Fetch all products
+          const res = await fetch(`http://localhost:3000/products`);
+          const products = await res.json();
 
-        // Merge data
-        const merged = bidsData.map(bid => {
-          const product = products.find(p => p._id === bid.product);
-          return {
-            ...bid,
-            productName: product?.title,
-            productPrice: product?.price_min,
-            productImage: product?.image,
-            sellerName: product?.seller_name,
-            sellerEmail: product?.email,
-            sellerImage: product?.seller_image,
-          };
-        });
+          // Merge data
+          const merged = bidsData.map((bid) => {
+            const product = products.find((p) => p._id === bid.product);
+            return {
+              ...bid,
+              productName: product?.title,
+              productPrice: product?.price_min,
+              productImage: product?.image,
+              sellerName: product?.seller_name,
+              sellerEmail: product?.email,
+              sellerImage: product?.seller_image,
+            };
+          });
 
-        setBids(merged);
-      })
-      .catch(error => console.error("Error fetching bids:", error));
-  }
-}, [user?.email]);
+          setBids(merged);
+        })
+        .catch((error) => console.error("Error fetching bids:", error));
+    }
+  }, [user?.email]);
 
-  const handleRemoveBid = (id) => {
-    fetch(`http://localhost:3000/bids/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then(() => {
-        setBids(bids.filter((bid) => bid._id !== id));
-      });
+  const handleRemoveBid = (_id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to redo this bid!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+
+        fetch(`http://localhost:3000/bids/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log("After dlt -> ", data)
+            if(data.deletedCount){
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your bid has been deleted.",
+                icon: "success",
+              });
+
+              const remainingBids = bids.filter(bid => bid._id !== _id);
+              setBids(remainingBids);
+
+            }
+          });
+
+      }
+    });
+    
   };
 
   return (
@@ -100,7 +127,7 @@ const MyBids = () => {
 
                 <td>
                   <span
-                    className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                    className={` px-3 py-1 rounded-full text-xs font-semibold ${
                       bid.status === "Pending"
                         ? "bg-yellow-100 text-yellow-600"
                         : bid.status === "Accepted"

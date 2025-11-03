@@ -179,6 +179,15 @@ async function run(){
             const result = await bidsCollection.insertOne(newBid);
             res.send(result);
         })
+
+
+        // delete mybids api
+        app.delete('/bids/:id', async(req, res) => {
+            const id = req.params.id;
+            const query = {_id: new ObjectId(id) }
+            const result = await bidsCollection.deleteOne(query);
+            res.send(result);
+        })
         
         //sending ping cmd to verify connection
         await client.db("admin").command({ping:1});
