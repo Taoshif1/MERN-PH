@@ -1,16 +1,87 @@
-import React, { use } from 'react';
-import Product from '../Product/Product';
-import { useLoaderData } from 'react-router';
+import { use, useContext, useRef } from "react";
+import { useLoaderData } from "react-router";
+import { AuthContext } from "../../context/AuthContext";
 
 const ProductDetails = () => {
-    const Product = useLoaderData();
-    console.log(Product)
-  
-    return (
-    <div>
-        pdeatils page;
-    </div>
-  )
-}
+  const {_id}  = useLoaderData();
+  const bidModalRef = useRef(null);
+  const { user } = use(AuthContext);
 
-export default ProductDetails
+  // console.log("Loaded Products: ",product);  // product = _id
+  // console.log("User ",user);
+
+  const handleBidModalOpen = () => {
+    bidModalRef.current.showModal();
+  }
+
+  const handleBidSubmit = (e) => {
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const bid = e.target.bid.value;
+
+    console.log("Name email bid -> ", _id, name, email, bid)
+  }
+
+  return (
+    <div>
+
+      {/* product info */}
+
+      <div>
+        <div></div>
+
+        <div>
+
+          <button 
+            onClick={handleBidModalOpen}
+            className="btn btn-primary">
+              I want to buy this product!
+          </button>
+
+
+          <dialog ref={bidModalRef} className="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+              <h3 class="text-lg font-bold">Give the best offer!</h3>
+              <p class="py-4">
+                Offer something seller can not resist
+              </p>
+
+              {/* form */}
+              <form onSubmit={handleBidSubmit}>
+                <fieldset class="fieldset">
+                  
+                  <label class="label">Name</label>
+                  <input type="text" class="input" name="name" defaultValue=
+                  {user.displayName} readOnly />
+                  
+                  <label class="label">Email</label>
+                  <input type="email" class="input" name="email" defaultValue={user.email} disabled />
+                  
+                  <label class="label">Bid</label>
+                  <input type="number" class="input" name="bid" placeholder=" Your Bid" />
+          
+                  <button class="btn btn-neutral mt-4">Place Your Bid</button>
+                
+                </fieldset>
+              </form>
+
+              <div class="modal-action">
+                <form method="dialog">
+                  {/* <!-- if there is a button in form, it will close the modal --> */}
+                  <button class="btn">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+
+        </div>
+      </div>
+
+      {/* bids for this product  */}
+    </div>
+  );
+};
+
+export default ProductDetails;
