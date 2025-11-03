@@ -32,6 +32,7 @@ const ProductDetails = () => {
       product: productId,
       buyer_name: name,
       buyer_email: email,
+      // buyer_image: user?.photoURL,
       bid_price: bid,
       status: "pending",
     };
@@ -53,6 +54,11 @@ const ProductDetails = () => {
             showConfirmButton: false,
             timer: 1500,
           });
+          // add new bid to state
+          newBid._id = data.insertedId;
+          const newBids =  [...bids, newBid];
+          newBids.sort((a,b) => {b.bid_price - a.bid_price});
+          setBids(newBids);
         }
       })
       .catch(console.error);
@@ -144,27 +150,28 @@ const ProductDetails = () => {
         </h3>
 
         <div className="overflow-x-auto rounded-lg shadow-sm border">
+
           <table className="table w-full">
+            
             <thead className="bg-purple-50 text-gray-700">
+              
               <tr>
                 <th>#</th>
-                <th>Buyer</th>
+                <th>Buyer Name</th>
                 <th>Bid Price</th>
                 <th>Status</th>
               </tr>
+            
             </thead>
-            <tbody>
-              {bids.length > 0 ? (
-                bids.map((bid, index) => (
+            
+            <tbody> 
+              {bids.length > 0 ? (bids.map((bid, index) => (
                   <tr key={bid._id} className="hover:bg-gray-50">
                     <td>{index + 1}</td>
                     <td>
                       <div className="flex items-center gap-3">
-                        <img
-                          src={bid.buyer_image || "https://i.pravatar.cc/50"}
-                          alt={bid.buyer_name}
-                          className="w-10 h-10 rounded-full"
-                        />
+                        <img src={bid.buyer_image || "https://i.pravatar.cc/50"} alt={bid.buyer_name} className="w-10 h-10 rounded-full" />
+                        
                         <div>
                           <p className="font-semibold">{bid.buyer_name}</p>
                           <p className="text-sm text-gray-500">
@@ -173,16 +180,14 @@ const ProductDetails = () => {
                         </div>
                       </div>
                     </td>
+                    
                     <td>${bid.bid_price}</td>
+                    
                     <td>
                       <span
                         className={`px-3 py-1 text-sm rounded-full ${
-                          bid.status === "confirmed"
-                            ? "bg-green-100 text-green-700"
-                            : "bg-yellow-100 text-yellow-700"
-                        }`}
-                      >
-                        {bid.status}
+                          bid.status === "confirmed" ? "bg-green-100 text-green-700" : "bg-yellow-100 text-yellow-700" }`} >
+                            {bid.status}
                       </span>
                     </td>
                   </tr>
