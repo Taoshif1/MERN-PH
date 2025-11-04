@@ -8,6 +8,11 @@ const port = process.env.PORT || 3000;
 const admin = require("firebase-admin");
 const jwt = require('jsonwebtoken');
 
+const serviceAccount = require("./smart-deals-firebase-adminsdk.json");
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
+});
+
 //middlewares
 app.use(cors());
 app.use(express.json());
@@ -20,12 +25,12 @@ const logger = (req, res, next) => {
 
 // verify middleware
 const verifyFireBaseToken = async (req, res, next) => {
-    console.log('In the verify middleware', req.headers.authorization)
+    // console.log('In the verify middleware', req.headers.authorization)
     if (!req.headers.authorization) {
-        // do not allow cause no auth in headers in request
+        // do not allow cause no auth(token) & maybe no headers in request
         return res.status(401).send({ message: 'unauthorized access' });
     }
-    // split the token ( Bearer[0 index] <token>[1]) & verify
+    // split the token ( Bearer[0 index] <token>[1]) & verify if there is token or not (do not allow)
     const token = req.headers.authorization.split(' ')[1];
     if (!token) {
         return res.status(401).send({ message: 'unauthorized access' })
