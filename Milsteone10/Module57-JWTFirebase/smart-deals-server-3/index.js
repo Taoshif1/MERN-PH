@@ -199,10 +199,14 @@ async function run(){
         // bids related apis
         app.get('/bids', logger, verifyFireBaseToken, async(req, res)=>{
             // console.log("headers", req.headers)
-            const email = req.query.email;
+            const email = req.query.email;  // checks whether my email & searched email are same or not
             const query = {};
 
-            if(email){
+            if (email) {
+                if (email !== req.token_email) {
+                    return res.status(403).send({ message: 'forbidden access' })
+                }
+
                 query.buyer_email = email;
             }
 
@@ -213,7 +217,7 @@ async function run(){
 
 
         // bids in a particular product api
-        app.get('/products/bids/:productId', async(req, res) =>{
+        app.get('/products/bids/:productId', verifyFireBaseToken, async(req, res) =>{
           const productId = req.params.productId;
           const query =   { product: productId};
           const cursor = bidsCollection.find(query).sort({bid_price: -1});

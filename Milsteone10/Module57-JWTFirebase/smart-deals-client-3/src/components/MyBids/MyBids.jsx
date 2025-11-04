@@ -39,7 +39,7 @@ const MyBids = () => {
         })
         .catch((error) => console.error("Error fetching bids:", error));
     }
-  }, [user?.email]);
+  }, [user]);
 
   const handleRemoveBid = (_id) => {
     Swal.fire({
