@@ -4,12 +4,69 @@ require('dotenv').config()
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express();
 const port = process.env.PORT || 3000;
-console.log(process)
+// console.log(process)
+const admin = require("firebase-admin");
+const jwt = require('jsonwebtoken');
 
 //middlewares
 app.use(cors());
 app.use(express.json());
 
+// middleware for specific task ig
+const logger = (req, res, next) => {
+    console.log('logging information');
+    next();
+}
+
+// verify middleware
+const verifyFireBaseToken = async (req, res, next) => {
+    console.log('In the verify middleware', req.headers.authorization)
+    if (!req.headers.authorization) {
+        // do not allow cause no auth in headers in request
+        return res.status(401).send({ message: 'unauthorized access' });
+    }
+    // split the token ( Bearer[0 index] <token>[1]) & verify
+    const token = req.headers.authorization.split(' ')[1];
+    if (!token) {
+        return res.status(401).send({ message: 'unauthorized access' })
+    }
+    // verify token
+    try {
+        const userInfo = await admin.auth().verifyIdToken(token);
+        req.token_email = userInfo.email;
+        console.log('after token validation', userInfo);
+        next();
+    }
+    catch {
+        console.log('invalid token')
+        return res.status(401).send({ message: 'unauthorized access' })
+    }
+
+}
+
+const verifyJWTToken = (req, res, next) => {
+
+    const authorization = req.headers.authorization;
+    if (!authorization) {
+        return res.status(401).send({ message: 'unauthorized access' })
+    }
+    const token = authorization.split(' ')[1];
+    if (!token) {
+        return res.status(401).send({ message: 'unauthorized access' })
+    }
+
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
+        if (err) {
+            return res.status(401).send({ message: 'unauthorized access' })
+        }
+        // put it in the right place
+        console.log('after decoded', decoded);
+        req.token_email = decoded.email;
+        next();
+    })
+
+
+}
 
 // const uri = "mongodb+srv://smartdbUser:bY0bW2CRsQ0a34JO@cluster0.kpmcxd4.mongodb.net/?appName=Cluster0";
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.kpmcxd4.mongodb.net/?appName=Cluster0`;
@@ -135,8 +192,8 @@ async function run(){
         })
 
         // bids related apis
-        app.get('/bids', async(req, res)=>{
-            console.log("headers", req.headers)
+        app.get('/bids', logger, verifyFireBaseToken, async(req, res)=>{
+            // console.log("headers", req.headers)
             const email = req.query.email;
             const query = {};
 
