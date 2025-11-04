@@ -23,7 +23,7 @@ const logger = (req, res, next) => {
     next();
 }
 
-// verify middleware
+// verify middleware from firebase
 const verifyFireBaseToken = async (req, res, next) => {
     // console.log('In the verify middleware', req.headers.authorization)
     if (!req.headers.authorization) {
@@ -49,6 +49,7 @@ const verifyFireBaseToken = async (req, res, next) => {
 
 }
 
+// for custom JWTToken, fully wasnt implemented
 const verifyJWTToken = (req, res, next) => {
 
     const authorization = req.headers.authorization;
@@ -102,7 +103,7 @@ async function run(){
         const usersCollection = db.collection('users');
 
 
-        // jwt related apis
+        // jwt related apis (generate token for custom JWTToken)
         app.post('/getToken', (req, res) => {
             const loggedUser = req.body;
             const token = jwt.sign(loggedUser, process.env.JWT_SECRET, { expiresIn: '1h' })
@@ -203,7 +204,7 @@ async function run(){
             res.send(result);
         })
 
-        // bids related apis
+        // bids related apis with firebase token verify
         app.get('/bids', logger, verifyFireBaseToken, async(req, res)=>{
             // console.log("headers", req.headers)
             const email = req.query.email;  // checks whether my email & searched email are same or not
