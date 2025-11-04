@@ -1,4 +1,5 @@
 /**
+ * # FIREBASE JWT built in ( first 2 steps are already done in firebase)
  * 1. after login : server will create a jwt token
  * 2. store it in the client side (localstorage, httponly cookies, in memory)
  * 3. For asking for sensitive data: send a request with jwt token in the header 
@@ -27,6 +28,7 @@
 */
 
 /**
+ * # How can we create custom JWT Token
  * 1. generate token
  * 
 */

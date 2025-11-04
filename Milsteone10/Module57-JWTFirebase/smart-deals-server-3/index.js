@@ -102,6 +102,13 @@ async function run(){
         const usersCollection = db.collection('users');
 
 
+        // jwt related apis
+        app.post('/getToken', (req, res) => {
+            const loggedUser = req.body;
+            const token = jwt.sign(loggedUser, process.env.JWT_SECRET, { expiresIn: '1h' })
+            res.send({ token: token })
+        })
+
         // USERS API
         //checking for same email during login=> not adding it in DB again
         app.post('/users', async(req, res) => {
