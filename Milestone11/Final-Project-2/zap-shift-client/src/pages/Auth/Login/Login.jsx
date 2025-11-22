@@ -9,6 +9,7 @@ const Login = () => {
     const { signInUser } = useAuth();
     const location = useLocation();
     const navigate = useNavigate();
+    console.log('in login page => ', location);
 
 
     const handleLogin = (data) => {
