@@ -1,0 +1,6 @@
+
+@import "tailwindcss";
+@plugin "daisyui"{
+  /* Set light as default and disable system dark mode detection */
+  themes: light --default;
+}
