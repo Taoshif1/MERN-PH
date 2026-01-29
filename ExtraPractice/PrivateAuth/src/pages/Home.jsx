@@ -1,12 +1,15 @@
 import Navbar from '../components/Navbar';
-import React from 'react';
 import App from '../App';
+import { Outlet } from 'react-router';
+import Footer from '../components/footer';
 
 const Home = () => {
     return (
         <div>
+            {/* <App></App> */}
             <Navbar></Navbar>
-            <App></App>
+            <Outlet></Outlet>
+            <Footer></Footer>
         </div>
 
     );
