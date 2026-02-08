@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>API</title>
+  </head>
+
+  <body>
+    
+    <div id="list-screen">
+      <h1>MERN Recap: API Fetching</h1>
+      <button onclick="handlePost()">Fetch All Posts</button>
+
+      <!-- Container for posts -->
+      <div id="post-container"></div>
+    </div>
+
+    <!-- Single Post Screen -->
+    <div id="detail-screen" style="display: none">
+      <button onclick="showList()">← Back to Posts</button>
+      <div id="single-post-content"></div>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
