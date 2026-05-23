@@ -15,7 +15,9 @@ class UserAccount {
     // name: string;
     // id: number;
     // isStudent: boolean;
-    constructor(name, id, isStudent) {
+    constructor(
+    // This is a modern shorthand for declaring & initializing the fields
+    name, id, isStudent) {
         // this.name = name;
         // this.id = id;
         // this.isStudent = isStudent;

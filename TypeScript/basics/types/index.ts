@@ -47,7 +47,8 @@ class UserAccount {
     // isStudent: boolean;
 
     constructor(
-                public name: string,
+        // This is a modern shorthand for declaring & initializing the fields
+                public name: string,    
                 public id: number,
                 public isStudent: boolean) {
         // this.name = name;
