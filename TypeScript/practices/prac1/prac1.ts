@@ -79,11 +79,11 @@ function printStudentInfo(student: IStudent): string {
     return `Student: ${student.id} - Name: ${student.name} in ${student.department} department`;
 }
 
-function enrollCourse(studentName: string, course1Name: string, course2Name?: string, semester?: number | string): string {
-    if (semester && course2Name) {
-        return `${studentName} has enrolled in ${course1Name} and ${course2Name} for semester ${semester}.`;
+function enrollCourse(studentName: string, courses: string[], semester?: number | string): string {
+    if (semester && courses.length > 1) {
+        return `${studentName} has enrolled in ${courses[0]} and ${courses[1]} for semester ${semester}.`;
     }
-    return `${studentName} has enrolled in ${course1Name}.`;
+    return `${studentName} has enrolled in ${courses[0]}.`;
 }
 
 function calculateFee(credits: number, costPerCredit: number = 5500): number {
@@ -92,11 +92,11 @@ function calculateFee(credits: number, costPerCredit: number = 5500): number {
 
 // console.log(printStudentInfo(student1));
 // console.log(calculateFee(course1.credits));
-// console.log(enrollCourse(student1.name, course1.courseName, course2.courseName, "Fall 2024"));
+// console.log(enrollCourse(student1.name, [course1.courseName, course2.courseName], "Fall 2024"));
 
 function printDetails(): void {
     console.log(printStudentInfo(student1));
-    console.log(enrollCourse(student1.name, course1.courseName, course2.courseName, "Fall 2024"));
+    console.log(enrollCourse(student1.name, [course1.courseName, course2.courseName], "Fall 2024"));
     console.log(calculateFee(course1.credits));
 }
 
