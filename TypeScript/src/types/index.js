@@ -31,4 +31,3 @@ const user1 = new UserAccount("Gazi Taoshif", 1, true);
 const user2 = new UserAccount("Mahafuza Moon", 2, true);
 console.log(user1.id, user1.name, user1.isStudent);
 console.log(user2.id, user2.name, user2.isStudent);
-//# sourceMappingURL=index.js.map

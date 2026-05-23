@@ -18,4 +18,3 @@ const firstBoolean = getFirstElement([true, false, true]);
 console.log(firstString); // Output: apple
 console.log(firstNumber); // Output: 1
 console.log(firstBoolean); // Output: true
-//# sourceMappingURL=generics.js.map

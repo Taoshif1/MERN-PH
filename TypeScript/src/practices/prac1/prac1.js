@@ -75,4 +75,3 @@ function printDetails() {
     console.log(calculateFee(course1.credits));
 }
 printDetails();
-//# sourceMappingURL=prac1.js.map
