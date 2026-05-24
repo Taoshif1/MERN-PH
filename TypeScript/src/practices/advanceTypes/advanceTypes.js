@@ -71,11 +71,11 @@ console.log("👤 Public Card Data Preview:", userPreviewData);
 async function runAsyncTest() {
     console.log("🌐 Fetching mock data...");
     // A mock API that returns a list of user names
-    const mockUrl = "https://typicode.com";
+    const mockUrl = "https://jsonplaceholder.typicode.com/users";
     const usersData = await fetchData(mockUrl);
-    // map through the raw data structure to grab individual strings
+    // Map through the raw data structure to grab individual strings
     if (usersData.length > 0) {
-        // Look at the first 3 items returned from the fetch promise
+        // First 3 items returned from the fetch promise
         console.log("✅ Fetch Successful! Sample user objects retrieved:", usersData.slice(0, 3));
     }
 }

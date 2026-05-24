@@ -89,7 +89,7 @@ console.log("👤 Public Card Data Preview:", userPreviewData);
 async function runAsyncTest() {
     console.log("🌐 Fetching mock data...");
     // A mock API that returns a list of user names
-    const mockUrl = "https://typicode.com";
+    const mockUrl = "https://jsonplaceholder.typicode.com/users";
 
     const usersData = await fetchData(mockUrl);
 
