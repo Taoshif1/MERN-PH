@@ -21,6 +21,7 @@ TypeScript/
    └─ practices/
       ├─ prac1/         # Basic domain architecture layout practice
       ├─ advanceTypes/  # Utility types (Partial, Pick), Enums & Async operations
+      ├─ funcPrac/      # Implemented a mini course system using all types of functions
       └─ generics/      # Reusable functions & strict array index lookups
 ```
 
@@ -376,6 +377,9 @@ TypeScript
 │  │  ├─ advanceTypes
 │  │  │  ├─ advanceTypes.js
 │  │  │  └─ advanceTypes.ts
+│  │  ├─ funcPrac
+│  │  │  ├─ courseSystem.js
+│  │  │  └─ courseSystem.ts
 │  │  ├─ generics
 │  │  │  ├─ generics.d.ts
 │  │  │  ├─ generics.d.ts.map
