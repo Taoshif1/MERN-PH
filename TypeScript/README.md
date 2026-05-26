@@ -437,6 +437,9 @@ TypeScript
 │  │  │  ├─ generics.js
 │  │  │  ├─ generics.js.map
 │  │  │  └─ generics.ts
+│  │  ├─ objTypes
+│  │  │  ├─ dashboard.js
+│  │  │  └─ dashboard.ts
 │  │  └─ prac1
 │  │     ├─ prac1.d.ts
 │  │     ├─ prac1.d.ts.map

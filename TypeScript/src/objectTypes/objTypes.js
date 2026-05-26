@@ -1,5 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const c1 = { title: "Next.js Backend" };
+const c2 = { title: "React Native", maxStudents: 50 };
 const user1 = {
     id: 123,
     name: "Taoshif",
@@ -9,9 +11,19 @@ const user2 = {
     name: "Moon",
     email: "moon@gmail.com"
 };
+const userDoc = {
+    _id: "65f210a4b",
+    username: "taoshif"
+};
+userDoc.username = "gazi taoshif"; // Allowed
 const product1 = {
     id: 1,
     name: "Laptop"
+};
+const examResults = {
+    "Taoshif": 95,
+    "Moon": 98,
+    "Reza": 88
 };
 const errors = {
     email: "Invalid email",
