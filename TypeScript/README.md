@@ -15,6 +15,7 @@ TypeScript/
 └─ src/                 # Main source directory
    ├─ firstCode/        # Initial syntax verification scripts
    ├─ types/            # Structural type compatibility & type definitions
+   ├─ objectTypes/      # Optional fields, index signatures & type intersections
    ├─ narrowing/        # Type guards, truthiness checks & OOP instance guarding
    ├─ tuples/           # Immutable arrays, optional fields, labels & rest elements
    ├─ functions/        # basic to advance functions
@@ -174,6 +175,53 @@ type ExamResults = [passed: boolean, student: string, score?: number];
 // Indefinite lengths handling trailing dynamic array sequences
 type SpreadsheetRow = [header: string, ...values: number[]];
 ```
+---
+
+### 5️⃣ Object Types & Structural Composition (`src/objectTypes/objTypes.ts`)
+Practiced the complete suite of Object Type rules from the handbook to master structural mapping, mutability controls, and dynamic extensions.
+
+* **Optional Fields (`?`)**: Allows objects to omit properties cleanly without throwing compiler validation flags.
+* **`readonly` Bounds**: Hardens database model interfaces (like MongoDB documents) by freezing specific indices against modifications.
+* **Index Signatures (`[key: string]`)**: Designs flexible lookup maps or payload containers for data fields whose property names are unknown ahead of time.
+* **Type Extensions & Intersections (`extends` / `&`)**: Explored structural subclassing via interface extension and shape merging with structural type intersections.
+* **Generic Data Layers (`ApiResponse<T>`)**: Developed adaptive wrapping signatures to cleanly encapsulate dynamic payloads across application contexts.
+
+```typescript
+// 1. Immutable Property Configurations
+interface MongoDBDoc {
+    readonly _id: string;
+    username: string;
+}
+
+// 2. Index Signatures for Dynamic Maps
+interface StudentGrades {
+    [studentName: string]: number; 
+}
+
+// 3. Interface Inheritance 
+interface Product {
+    readonly id: number;
+    name: string;
+}
+interface IProductWithPremium extends Product {
+    premium: boolean;
+}
+
+// 4. Type Intersections (&)
+interface IClassRepresentative { isCR: boolean; }
+type IAdmin = IClassRepresentative & IUser;
+
+// 5. Generic Responses
+interface ApiResponse<T> {
+    success: boolean;
+    data: T;
+}
+const response: ApiResponse<string[]> = {
+    success: true,
+    data: ["React", "TS"]
+};
+```
+
 ---
 
 ## ⚡ Deep Dive: Mastering TypeScript Functions (`src/functions/functions.ts`)
@@ -373,6 +421,9 @@ TypeScript
 │  ├─ narrowing
 │  │  ├─ index.js
 │  │  └─ index.ts
+│  ├─ objectTypes
+│  │  ├─ objTypes.js
+│  │  └─ objTypes.ts
 │  ├─ practices
 │  │  ├─ advanceTypes
 │  │  │  ├─ advanceTypes.js

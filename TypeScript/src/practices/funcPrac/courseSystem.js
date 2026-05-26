@@ -1,6 +1,6 @@
 "use strict";
 // ==========================================
-// 🏗️ SYSTEM CONFIGURATIONS & TYPE DEFINITIONS
+// SYSTEM CONFIGURATIONS & TYPE DEFINITIONS
 // ==========================================
 Object.defineProperty(exports, "__esModule", { value: true });
 var CourseLevel;
@@ -10,7 +10,7 @@ var CourseLevel;
     CourseLevel["Advanced"] = "Advanced";
 })(CourseLevel || (CourseLevel = {}));
 // ==========================================
-// 🛠️ UTILITY & MANAGEMENT FUNCTIONS
+// UTILITY & MANAGEMENT FUNCTIONS
 // ==========================================
 function cloneData(data) {
     return [...data];
@@ -71,7 +71,7 @@ async function fetchCourses() {
     ];
 }
 // ==========================================
-// 🚀 EXECUTION & LIFECYCLE RUNNER
+//  EXECUTION & LIFECYCLE RUNNER
 // ==========================================
 async function runSystem() {
     console.log("--- 🏁 STARTING COURSE SYSTEM --- \n");
@@ -116,5 +116,5 @@ async function runSystem() {
     });
     console.log("--- 🔚 SYSTEM TASKS COMPLETE ---");
 }
-// Run the core system application wrapper
+// Run the core mini system application wrapper
 runSystem();
